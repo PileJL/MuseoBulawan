@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Museo Bulawan Official</title>
+	<link rel="icon" href="Images/Logo 1.png">
+    <link rel="stylesheet" type="text/css" href="Index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div class="section landing_sec" style="background-image: url('')">
+		<img class="logo" src="Images/Logo 2.png" onclick="buttonClicked()" alt="Museo Bulawan Logo">
+		
+		<script>
+			var clickCount = 0;
+			function buttonClicked() {
+				clickCount++;
+				if (clickCount === 8) {
+					window.location.href = "Signin.html";
+				}
+			}
+		</script>
+        
+        <div class="nav1">
+            <a class="nav1_btn" href="About.html">About Us</a>
+            <a class="nav1_btn" href="Events.html">Events</a>
+            <a class="nav1_btn" href="Services.html">Services</a>
+        </div>
+
+		<div class="slideshow">
+			<img src="Images/Bulawan 1.jpg" class="active" />
+			<img src="Images/Bulawan 2.png" />
+		</div>
+		
+		<script>
+			var slideIndex = 0;
+			showSlides();
+			function showSlides() {
+				var slides = document.getElementsByClassName("slideshow")[0].getElementsByTagName("img");
+				for (var i = 0; i < slides.length; i++) {
+					slides[i].classList.remove("active");
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {
+					slideIndex = 1;
+				}
+				slides[slideIndex-1].classList.add("active");
+				setTimeout(showSlides, 4000); 
+			}
+		</script>
+		
+		<div class="text-container">
+			<p class="text"><b>"No development can be sustainable without a strong culture component. Indeed only a human-centred approach to development based on mutual respect and open dialogue among cultures can lead to lasting peace." <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-UNESCO</b></p>
+		</div>
+
+		<a href = "Events.html"><button class = "event_btn">LATEST EVENTS</button></a>
+
+		<div class="nav2">
+			<a href = "LAHC.html#lectures_sec"><button class = "nav2_btn">Lectures</button></a>
+			<a href = "LAHC.html#heroes1_sec"><button class = "nav2_btn">Heroes</button></a>
+			<a href = "LAHC.html#artifacts1_sec"><button class = "nav2_btn">Artifacts</button></a>
+			<a href = "LAHC.html#collections1_sec"><button class = "nav2_btn">Collection</button></a>
+		</div>
+
+
+		<div class="tagline">"An Exponent of Cultural Development"</div>
+
+		<div class="image-container">
+			<img class="artifacts" id="random-image" src="" alt="">
+			<div class="title" id="image-title"></div>
+			<div class="date" id="image-date"></div>
+			<div class="description" id="image-description"></div>
+			<a class="button" id="image-button" href=""><b>SEE MORE &nbsp;&nbsp;&nbsp;⮞</b></a>
+		</div>
+		  
+		<script>
+			var images = [
+				{
+				src: "Artifacts/Iron.png",
+				url: "Backgrounds/IronBG.png",
+				mobileUrl: "Mobile/IronBG.png",
+				title: "Iron",
+				date: "(1870)",
+				description: "The invention of the Charcoal iron took place during the 15th century in response to the demand for well-pressed clothing. Initially, these irons were constructed using metal materials such as cast iron or iron. They featured a singular structure with a hinged lid at the back, allowing for easy opening and closing. To generate the required heat for ironing, these irons were placed in hot coals. Additionally, a wooden handle was affixed to the top of the lid, serving as a protective measure to prevent burns while handling the iron during the ironing process."
+			},
+				{
+				src: "Artifacts/Radio.png",
+				url: "Backgrounds/RadioBG.png",
+				mobileUrl: "Mobile/RadioBG.png",
+				title: "Radio",
+				date: "(1976)",
+				description: "Telefunken Vintage Radio are a testament to the timeless beauty of mid-20th century design and engineering. These iconic radios boast a striking blend of artistry and functionality, with their sleek wooden cabinets, intricate grille patterns, and polished knobs. Crafted with meticulous attention to detail, Telefunken Vintage Radios not only serve as functional audio devices but also as elegant pieces of decor that evoke a sense of nostalgia and charm."
+			},
+			{
+				src: "Artifacts/Teapot.png",
+				url: "Backgrounds/TeapotBG.png",
+				mobileUrl: "Mobile/TeapotBG.png",
+				title: "Teapot",
+				date: "(1880's)",
+				description: "The personalized antique hand-painted teapot is a true work of art, showcasing intricate and delicate brushstrokes that make it one-of-a-kind. Crafted with precision and care, every detail on the teapot is meticulously hand-painted, adding a touch of elegance and uniqueness. With its personalized design, this teapot serves as a cherished heirloom, a beautiful centerpiece for any tea-time gathering, and a reminder of the artistic craftsmanship of the past."
+			},
+			{
+				src: "Artifacts/Choco.png",
+				url: "Backgrounds/ChocoBG.png",
+				mobileUrl: "Mobile/ChocoBG.png",
+				title: "Choco Coaster",
+				date: "(1920's)",
+				description: "The antique chocolate coaster resembles a traditional kettle with its distinctive design. Crafted with exquisite attention to detail, this pot showcases a charming combination of elegance and functionality. Made from durable materials, it features a long handle for easy maneuverability and a spout for precise pouring, allowing chocolatiers of the past to coat confections with a smooth, velvety layer of chocolate."
+			}
+			];
+			function setBackgroundImage() {
+				var randomIndex = Math.floor(Math.random() * images.length);
+				var image = document.getElementById("random-image");
+				image.src = images[randomIndex].src;
+				image.alt = images[randomIndex].title;
+				var title = document.getElementById("image-title");
+				title.textContent = images[randomIndex].title;
+				var date = document.getElementById("image-date");
+				date.textContent = images[randomIndex].date;
+				var description = document.getElementById("image-description");
+				description.textContent = images[randomIndex].description;
+				var button = document.getElementById("image-button");
+				button.href = "lahc.html#artifacts1_sec";
+
+				var url = document.querySelector(".landing_sec");
+				if (window.innerWidth <= 391) { 
+					url.style.backgroundImage = "url(" + images[randomIndex].mobileUrl + ")";
+				} else {
+					url.style.backgroundImage = "url(" + images[randomIndex].url + ")";
+				}
+			}
+			setBackgroundImage();
+			window.addEventListener("resize", setBackgroundImage);
+		</script>
+	</div>
+
+	<div class="section bantayog_sec">
+
+		<div class="bantayog_title">Camarines Norte as the Home of<br>Jose Rizal's 1st Bantayog</div>
+		<img class="first_bantayog_pic" src="Images/First Bantayog.png" alt="First Bantayog" >
+		<img class = "first_bantayog1" src="Images/Bantayog 1.jpg" alt="First Bantayog" onclick="toggleFullScreen(this);" style = "cursor: pointer;">
+		<p class = "bantayog_txt">The significance of the Bantayog extends beyond its artistic representation. It serves as a historical marker, reminding both locals and visitors of Rizal's visit to Camarines Norte and the influence he had in igniting the spirit of independence among the people. The Bantayog has become a cherished landmark and a site for gatherings and ceremonies that commemorate Rizal's contributions to the nation.</p>
+		<a class="see_more_btn" id="image-button" href="Bantayog.html"><b>SEE MORE &nbsp;&nbsp;&nbsp;⮞</b></a>
+		<img class = "first_bantayog2" src="Images/Bantayog 2.jpg" alt="First Bantayog" onclick="toggleFullScreen(this);" style = "cursor: pointer;">
+		<p class = "bantayog_txt2">As the first Bantayog of Jose Rizal in Camarines Norte, this monument stands as a testament to the province's deep respect and admiration for the national hero. It represents the enduring legacy of Rizal's teachings, inspiring future generations to uphold the values of freedom, justice, and love for country.</p>
+		<a class="see_more_btn2" id="image-button" href="Bantayog.html"><b>SEE MORE &nbsp;&nbsp;&nbsp;⮞</b></a>
+	
+	</div>
+
+	<div class="section footer_sec">
+
+		<img class = "bulawan_logo" src="Images/Logo 1.png" alt="Museo Bulawan Logo">
+		<p class = "bulawan_title"><b>MUSEO BULAWAN</b></p>
+		<p class = "bulawan_tagline">"An Exponent of Cultural Development"</p>
+		<p class = "connect">CONNECT WITH US</p>
+
+		<div class="contacts">
+            <a href="https://www.facebook.com/museobulawancn" target="_blank">
+                <img src="Contacts/Facebook.png" alt="Facebook">
+            </a>
+            <a href="https://m.me/museobulawancn" target="_blank">
+                <img src="Contacts/Messenger.png" alt="Messenger">
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=bulawanmuseo@gmail.com&su=New%20Message" target="_blank">
+                <img src="Contacts/Gmail.png" alt="Gmail" title="Open Gmail">
+            </a>
+            <a href="https://instagram.com/museobulawan?igshid=YmMyMTA2M2Y=" target="_blank">
+                <img src="Contacts/Instagram.png" alt="Instagram">
+            </a>
+        </div>
+	</div>
+
+	<script>
+		function toggleFullScreen(img) {
+			if (!document.fullscreenElement) {
+				img.requestFullscreen();
+			} else {
+				document.exitFullscreen();
+			}
+		}
+	</script>
+</body>
+</html>

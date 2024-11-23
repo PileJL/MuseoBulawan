@@ -1,0 +1,178 @@
+@font-face {
+    font-family: "Sukar Black";
+    src: url("Fonts/Sukar black.ttf");
+    }
+
+@font-face {
+    font-family: "Core Narae Pro";
+    src: url("Fonts/Core narae Pro.ttf");
+    }
+
+@font-face {
+    font-family: "Lumios Marker";
+    src: url("Fonts/Lumios Marker.otf");
+    }
+
+@font-face {
+    font-family: "Charm";
+    src: url("Fonts/Charm.ttf");
+    }
+
+@font-face {
+    font-family: "Intro Rust";
+    src: url("Fonts/Intro Rust.otf");
+    }
+
+@font-face {
+    font-family: "Norwester";
+    src: url("Fonts/Norwester.otf");
+    }
+
+@font-face {
+    font-family: "GlacialIndifference";
+    src: url("Fonts/GlacialIndifference.otf");
+    }
+
+@font-face {
+    font-family: "GlacialIndifference2";
+    src: url("Fonts/GlacialIndifference2.otf");
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    }
+
+.section {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+.latest_sec {
+    background-image: url('Backgrounds/LatestBG.png');
+    }
+
+.logo {
+    position:absolute;
+    top: 3vh;
+    left: 2vw;
+    height: auto;
+    width:6vw;
+    }
+
+.nav1 {
+    position: absolute;
+    top: 6.5vh;
+    left: 8.5vw;
+    align-items: center;
+    }
+
+.nav1_btn {
+    font-family: "Sukar Black";
+    font-size: 1.5vw;
+    padding: 0em 2em;
+    color:white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+    }
+
+.nav1_btn:hover {
+    font-size: 1.7vw;
+    border-radius: 5vw;
+    background-color: rgba(255, 255, 255, 0.1);
+    }
+
+.latest_title {
+    position: absolute;
+    font-size: 6.5vw;
+    top:10vh;
+    width:37vw;
+    left:31vw;
+    font-family: "GlacialIndifference";
+    text-align: center;
+    color:white;
+    }
+
+#month-year {
+    position: absolute;
+    font-size: 3vw;
+    top:52vh;
+    width:37vw;
+    letter-spacing: 0.7vw;
+    left:31vw;
+    font-family: "GlacialIndifference2";
+    text-align: center;
+    color:white;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 391px) {
+    .latest_sec {
+        height: 50vh;
+        background-image: url('Mobile/LatestBG.png');
+        }
+
+    .logo {
+        position:absolute;
+        top: 3vh;
+        left: 5vw;
+        height: auto;
+        width:15vw;
+        }
+
+    .nav1 {
+        position: absolute;
+        top:5.4vh;
+        left: 21vw;
+        align-items: center;
+        }
+    
+    .nav1_btn {
+        font-family: "Sukar Black";
+        font-size: 3.5vw;
+        padding: 0em 1em;
+        color:white;
+        cursor: pointer;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out;
+        }
+    
+    .nav1_btn:hover {
+        font-size: 3.7vw;
+        border-radius: 5vw;
+        background-color: rgba(0, 0, 0, 0.1);
+        }
+            
+    .latest_title {
+        position: absolute;
+        font-size: 12vw;
+        top:9vh;
+        width:80vw;
+        left:10vw;
+        font-family: "GlacialIndifference";
+        text-align: center;
+        color:white;
+        }
+
+    #month-year {
+        position: absolute;
+        font-size: 8vw;
+        top:25vh;
+        width:80vw;
+        letter-spacing: 0.7vw;
+        left:11vw;
+        font-family: "GlacialIndifference2";
+        text-align: center;
+        color:white;
+    }
+    
+    }

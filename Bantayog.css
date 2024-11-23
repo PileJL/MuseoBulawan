@@ -1,0 +1,485 @@
+@font-face {
+    font-family: "Sukar Black";
+    src: url("Fonts/Sukar black.ttf");
+    }
+
+@font-face {
+    font-family: "Core Narae Pro";
+    src: url("Fonts/Core narae Pro.ttf");
+    }
+
+@font-face {
+    font-family: "Lumios Marker";
+    src: url("Fonts/Lumios Marker.otf");
+    }
+
+@font-face {
+    font-family: "Charm";
+    src: url("Fonts/Charm.ttf");
+    }
+
+@font-face {
+    font-family: "Intro Rust";
+    src: url("Fonts/Intro Rust.otf");
+    }
+
+@font-face {
+    font-family: "Norwester";
+    src: url("Fonts/Norwester.otf");
+    }
+    
+@font-face {
+    font-family: "Garet";
+    src: url("Fonts/Garet.otf");
+    }
+
+@font-face {
+    font-family: "Carlson Sans";
+    src: url("Fonts/Carlson Sans.ttf");
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    }
+
+.section {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+.bantayog_sec {
+    background-image: url('Backgrounds/1stBantayogBG.png');
+    }
+
+.logo {
+    position:absolute;
+    top: 3vh;
+    left: 2vw;
+    height: auto;
+    width:6vw;
+    }
+
+.nav1 {
+    position: absolute;
+    top: 6.5vh;
+    left: 8.5vw;
+    align-items: center;
+    }
+
+.nav1_btn {
+    font-family: "Sukar Black";
+    font-size: 1.5vw;
+    padding: 0em 2em;
+    color:white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+    }
+
+.nav1_btn:hover {
+    font-size: 1.7vw;
+    border-radius: 5vw;
+    background-color: rgba(0, 0, 0, 0.1);
+    }
+
+.bantayog_title {
+    position: absolute;
+    top: 24vh;
+    left: 20vw;
+    line-height: 12vh;
+    color:white;
+    font-family: "Lumios Marker";
+    text-align: center;
+    font-size: 6.1vw;
+    text-shadow: 0.3vw 0.3vw 0.3vw #000000;
+}
+
+.first_bantayog_pic {
+    position: absolute;
+    top: 58vh;
+    left: 37vw;
+    height: auto;
+    width: 27vw;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.bantayog_sec2 {
+    background-image: url('Backgrounds/1stBantayogBG2.png');
+    }
+
+.message_txt{
+    position: absolute;
+    top: 135vh;
+    left: 7vw;
+    text-align: justify;
+    padding: 0em;
+    margin: 50px 0;
+    width: 85vw;
+    font-size: 1.2vw;
+    font-family: "Garet";
+    color:white;
+}
+
+.container {
+    position: absolute;
+    top: 172vh;
+    left: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    width: 18vw;
+    height: 18vw;
+    margin: 2vw;
+    border: solid;
+    border-width: 0.7vw;
+    border-color: white;
+    border-radius: 3vw;
+    cursor: pointer;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.bantayogfes_sec {
+    background-image: url('Backgrounds/FestivalBG.png');
+    }
+
+.bantayogfes_title {
+    position: absolute;
+    top: 215vh;
+    left: 15vw;
+    line-height: 12vh;
+    color:white;
+    font-family: "Lumios Marker";
+    text-align: center;
+    font-size: 10vw;
+    text-shadow: 0.3vw 0.3vw 0.3vw #000000a9;
+}
+
+.bantayogfes_txt{
+    position: absolute;
+    top: 252vh;
+    left: 7vw;
+    text-align: justify;
+    padding: 0em;
+    margin: 50px 0;
+    width: 85vw;
+    font-size: 1.2vw;
+    font-family: "Garet";
+    color:white;
+}
+
+
+.bantayogfes_sec2 {
+    height:45vh;
+    background-image: url('Mobile/1stBantayogBG2.png');
+    }
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_sec {
+    height: 60vh;
+    background-image: url('Backgrounds/FooterBG.png');
+    }
+
+.bulawan_logo {
+    position: absolute;
+    top: 350vh;
+    left: 47vw;
+    height: auto; 
+    width: 6.5vw;
+}
+
+.bulawan_title {
+    position: absolute;
+    top:358vh;
+    left:32vw;
+    width:37vw;
+    text-align: center;
+    font-size: 3.8vw;
+    font-family: "Intro Rust";
+    color:black;
+  }
+
+.bulawan_tagline {
+    position: absolute;
+    font-size: 2.7vw;
+    top:368vh;
+    width:37vw;
+    left:32vw;
+    font-family: "Lumios Marker";
+    text-align: center;
+    color:black;
+  }
+
+.connect {
+    position: absolute;
+    top:379.5vh;
+    left:40vw;
+    width:20vw;
+    border: none;
+    border-top: 0.8vh solid black;
+    text-align: center;
+    font-size: 2.4vw;
+    font-family: "Norwester";
+    color:black;
+  }
+
+.contacts {
+    position: absolute;
+    top:393vh; /*348*/
+    left:38.7vw;
+}
+.contacts img {
+    width: 3.6vw;
+    margin: 0 1vw;
+    cursor: pointer;
+    transition: width 0.3s ease-in-out;
+}
+
+.contacts img:hover {
+    width: 4vw;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 391px) {
+    .bantayog_sec {
+        background-image: url('Mobile/1stBantayogBG.png');
+        }
+    
+    .logo {
+        position:absolute;
+        top: 3vh;
+        left: 5vw;
+        height: auto;
+        width:15vw;
+        }
+
+    .nav1 {
+        position: absolute;
+        top:5.4vh;
+        left: 21vw;
+        align-items: center;
+        }
+    
+    .nav1_btn {
+        font-family: "Sukar Black";
+        font-size: 3.5vw;
+        padding: 0em 1em;
+        color:white;
+        cursor: pointer;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out;
+        }
+    
+    .nav1_btn:hover {
+        font-size: 3.7vw;
+        border-radius: 5vw;
+        background-color: rgba(0, 0, 0, 0.1);
+        }
+    
+    .bantayog_title {
+        position: absolute;
+        top: 17vh;
+        left: 7vw;
+        line-height: 4vh;
+        width:84vw;
+        color:white;
+        font-family: "Lumios Marker";
+        text-align: center;
+        font-size: 11vw;
+        text-shadow: 0.3vw 0.3vw 0.3vw #000000;
+    }
+    
+    .first_bantayog_pic {
+        position: absolute;
+        top: 40vh;
+        left: 23vw;
+        height: auto;
+        width: 55vw;
+    }
+    
+    
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .bantayog_sec2 {
+        height: 0vh;
+        background-image: url('Mobile/1stBantayogBG2.png');
+        }
+    
+    .message_txt{
+        position: absolute;
+        top: 72.5vh;
+        left: 7vw;
+        text-align: justify;
+        padding: 0em;
+        margin: 50px 0;
+        width: 85vw;
+        font-size: 2.5vw;
+        font-family: "Garet";
+        color:white;
+    }
+    
+    .container {
+        position: absolute;
+        top: 105vh;
+        width: 90vw;
+        left: 5vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+      
+    .container img {
+    width: 35vw;
+    height: 35vw;
+    margin: 2vw;
+    border: solid;
+    border-width: 0.7vw;
+    border-color: white;
+    border-radius: 3vw;
+    animation: float 2s ease-in-out infinite;
+    }
+    
+    .container img:nth-child(3), .container img:nth-child(4) {
+    margin-top: 1vh;
+    }
+    
+    
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+    
+        50% {
+            transform: translateY(-2vh);
+        }
+    
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .bantayogfes_sec {
+        background-image: url('Mobile/1stBantayogBG2.png');
+        }
+    
+    .bantayogfes_title {
+        position: absolute;
+        top: 138vh;
+        left: 17vw;
+        line-height: 12vh;
+        color:white;
+        font-family: "Lumios Marker";
+        text-align: center;
+        font-size: 12vw;
+        text-shadow: 0.3vw 0.3vw 0.3vw #000000a9;
+    }
+    
+    .bantayogfes_txt{
+        position: absolute;
+        top: 150vh;
+        left: 7vw;
+        text-align: justify;
+        padding: 0em;
+        margin: 50px 0;
+        width: 85vw;
+        font-size: 2.4vw;
+        font-family: "Garet";
+        color:white;
+    }
+
+    .bantayogfes_sec2 {
+        background-image: url('Mobile/1stBantayogBG2.png');
+        }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .footer_sec {
+        height: 20vh;
+        background-image: url('Mobile/FooterBG.png');
+        }
+
+    .bulawan_logo {
+        position: absolute;
+        top: 246.4vh;
+        left: 46vw;
+        height: auto; 
+        width: 10vw;
+    }
+
+    .bulawan_title {
+        position: absolute;
+        top:249.4vh;
+        left:30vw;
+        width:42vw;
+        text-align: center;
+        font-size: 4.5vw;
+        font-family: "Intro Rust";
+        color:black;
+    }
+
+    .bulawan_tagline {
+        position: absolute;
+        font-size: 3.7vw;
+        top:251.9vh;
+        width:48vw;
+        left:27vw;
+        font-family: "Lumios Marker";
+        text-align: center;
+        color:black;
+    }
+
+    .connect {
+        position: absolute;
+        top:255.4vh;
+        left:38vw;
+        width:25vw;
+        border: none;
+        border-top: 0.2vh solid black;
+        text-align: center;
+        font-size: 3.4vw;
+        font-family: "Norwester";
+        color:black;
+    }
+
+    .contacts {
+        position: absolute;
+        top:260.9vh; /*403*/
+        left:29vw;
+    }
+    .contacts img {
+        width: 6vw;
+        margin: 0 1.8vw;
+        cursor: pointer;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .contacts img:hover {
+        width: 4vw;
+    }
+}

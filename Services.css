@@ -1,0 +1,414 @@
+@font-face {
+    font-family: "Sukar Black";
+    src: url("Fonts/Sukar black.ttf");
+    }
+
+@font-face {
+    font-family: "Core Narae Pro";
+    src: url("Fonts/Core narae Pro.ttf");
+    }
+
+@font-face {
+    font-family: "Lumios Marker";
+    src: url("Fonts/Lumios Marker.otf");
+    }
+
+@font-face {
+    font-family: "Charm";
+    src: url("Fonts/Charm.ttf");
+    }
+
+@font-face {
+    font-family: "Intro Rust";
+    src: url("Fonts/Intro Rust.otf");
+    }
+
+@font-face {
+    font-family: "Norwester";
+    src: url("Fonts/Norwester.otf");
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    }
+
+.section {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+.services_sec {
+    background-image: url('Backgrounds/ServicesBG.png');
+    }
+
+.logo {
+    position:absolute;
+    top: 3vh;
+    left: 2vw;
+    height: auto;
+    width:6vw;
+    }
+
+.nav1 {
+    position: absolute;
+    top: 6.5vh;
+    left: 8.5vw;
+    align-items: center;
+    }
+
+.nav1_btn {
+    font-family: "Sukar Black";
+    font-size: 1.5vw;
+    padding: 0em 2em;
+    color:white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+    }
+
+.nav1_btn:hover {
+    font-size: 1.7vw;
+    border-radius: 5vw;
+    background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+.services_txt{
+    position: absolute;
+    top: 19vh;
+    left: 3vw;
+    width: 45vw;
+    text-align: justify;
+    color:white;
+    font-family: "Century Gothic";
+    font-size: 1.1vw;
+}
+
+.services_btn {
+    position: absolute;
+    top: 52vh;
+    left: 2.5vw
+}
+
+.services_btn1 {
+    display: block;
+    width: 37vw;
+    border-color: #C39A3E;
+    border-width: 0.5vw;
+    color: white;
+    text-align: center;
+    border-radius: 5vw;
+    margin: 4vh auto;
+    padding: 0.2em;
+    font-family: "Century Gothic";
+    font-size: 2.3vw;
+    text-decoration: none;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.services_btn2 {
+    display: block;
+    width: 37vw;
+    border-color: #C39A3E;
+    border-width: 0.5vw;
+    color: white;
+    text-align: center;
+    border-radius: 5vw;
+    margin: 4vh auto;
+    padding: 0.2em;
+    font-family: "Century Gothic";
+    font-size: 2.3vw;
+    text-decoration: none;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.services_btn3 {
+    display: block;
+    width: 37vw;
+    border-color: #C39A3E;
+    border-width: 0.5vw;
+    color: white;
+    text-align: center;
+    border-radius: 5vw;
+    margin: 4vh auto;
+    padding: 0.2em;
+    font-family: "Century Gothic";
+    font-size: 2.3vw;
+    text-decoration: none;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.services_btn1:hover, .services_btn2:hover, .services_btn3:hover{
+    font-size: 2.5vw;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_sec {
+    height: 60vh;
+    background-image: url('Backgrounds/FooterBG.png');
+    }
+
+.bulawan_logo {
+    position: absolute;
+    top: 105vh;
+    left: 47vw;
+    height: auto; 
+    width: 6.5vw;
+}
+
+.bulawan_title {
+    position: absolute;
+    top:113vh;
+    left:32vw;
+    width:37vw;
+    text-align: center;
+    font-size: 3.8vw;
+    font-family: "Intro Rust";
+    color:black;
+  }
+
+.bulawan_tagline {
+    position: absolute;
+    font-size: 2.7vw;
+    top:123vh;
+    width:37vw;
+    left:32vw;
+    font-family: "Lumios Marker";
+    text-align: center;
+    color:black;
+  }
+
+.connect {
+    position: absolute;
+    top:134.5vh;
+    left:40vw;
+    width:20vw;
+    border: none;
+    border-top: 0.8vh solid black;
+    text-align: center;
+    font-size: 2.4vw;
+    font-family: "Norwester";
+    color:black;
+  }
+
+.contacts {
+    position: absolute;
+    top:148vh;
+    left:38.7vw;
+}
+.contacts img {
+    width: 3.6vw;
+    margin: 0 1vw;
+    cursor: pointer;
+    transition: width 0.3s ease-in-out;
+}
+
+.contacts img:hover {
+    width: 4vw;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 391px) {
+    .section {
+        height: 80vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        }
+
+    .services_sec {
+        background-image: url('Mobile/ServicesBG.png');
+        }
+    
+    .logo {
+        position:absolute;
+        top: 3vh;
+        left: 5vw;
+        height: auto;
+        width:15vw;
+        }
+
+    .nav1 {
+        position: absolute;
+        top:5.4vh;
+        left: 21vw;
+        align-items: center;
+        }
+    
+    .nav1_btn {
+        font-family: "Sukar Black";
+        font-size: 3.5vw;
+        padding: 0em 1em;
+        color:white;
+        cursor: pointer;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out;
+        }
+    
+    .nav1_btn:hover {
+        font-size: 3.7vw;
+        border-radius: 5vw;
+        background-color: rgba(0, 0, 0, 0.1);
+        }
+
+    .services_txt{
+        position: absolute;
+        top: 15vh;
+        left: 9vw;
+        width: 82vw;
+        text-align: justify;
+        color:white;
+        font-family: "Century Gothic";
+        font-size: 3vw;
+    }
+    
+    .services_btn {
+        position: absolute;
+        top: 44vh;
+        left: 10vw
+    }
+    
+    .services_btn1 {
+        display: block;
+        width: 80vw;
+        height:6vh;
+        border-color: #C39A3E;
+        border-width: 1vw;
+        color: white;
+        text-align: center;
+        border-radius: 5vw;
+        margin: 4vh auto;
+        padding: 0.2em;
+        font-family: "Century Gothic";
+        font-size: 5vw;
+        text-decoration: none;
+        cursor: pointer;
+        transition: font-size 0.3s ease-in-out;
+        background-color: transparent;
+    }
+
+
+    .services_btn2 {
+        display: block;
+        width: 80vw;
+        height:6vh;
+        border-color: #C39A3E;
+        border-width: 1vw;
+        color: white;
+        text-align: center;
+        border-radius: 5vw;
+        margin: 4vh auto;
+        padding: 0.2em;
+        font-family: "Century Gothic";
+        font-size: 5vw;
+        text-decoration: none;
+        cursor: pointer;
+        transition: font-size 0.3s ease-in-out;
+        background-color: transparent;
+    }
+    
+
+    .services_btn3 {
+        display: block;
+        width: 80vw;
+        height:6vh;
+        border-color: #C39A3E;
+        border-width: 1vw;
+        color: white;
+        text-align: center;
+        border-radius: 5vw;
+        margin: 4vh auto;
+        padding: 0.2em;
+        font-family: "Century Gothic";
+        font-size: 5vw;
+        text-decoration: none;
+        cursor: pointer;
+        transition: font-size 0.3s ease-in-out;
+        background-color: transparent;
+    }
+    
+    
+    .services_btn1:hover, .services_btn2:hover, .services_btn3:hover{
+        font-size: 5.2vw;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .footer_sec {
+        height: 20vh;
+        background-image: url('Mobile/FooterBG.png');
+        }
+
+    .bulawan_logo {
+        position: absolute;
+        top: 81.4vh;
+        left: 46vw;
+        height: auto; 
+        width: 10vw;
+    }
+
+    .bulawan_title {
+        position: absolute;
+        top:84.4vh;
+        left:30vw;
+        width:42vw;
+        text-align: center;
+        font-size: 4.5vw;
+        font-family: "Intro Rust";
+        color:black;
+    }
+
+    .bulawan_tagline {
+        position: absolute;
+        font-size: 3.7vw;
+        top:86.9vh;
+        width:48vw;
+        left:27vw;
+        font-family: "Lumios Marker";
+        text-align: center;
+        color:black;
+    }
+
+    .connect {
+        position: absolute;
+        top:90.4vh;
+        left:38vw;
+        width:25vw;
+        border: none;
+        border-top: 0.2vh solid black;
+        text-align: center;
+        font-size: 3.4vw;
+        font-family: "Norwester";
+        color:black;
+    }
+
+    .contacts {
+        position: absolute;
+        top:95.9vh;
+        left:29vw;
+    }
+    .contacts img {
+        width: 6vw;
+        margin: 0 1.8vw;
+        cursor: pointer;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .contacts img:hover {
+        width: 4vw;
+    }
+}

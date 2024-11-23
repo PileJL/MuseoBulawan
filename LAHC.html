@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Museo Bulawan Official</title>
+	<link rel="icon" href="Images/Logo 1.png">
+    <link rel="stylesheet" type="text/css" href="LAHC.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media only screen and (max-width: 391px) {
+            .heroe1_name span, .heroe2_name span {
+                font-size: 10vw;
+            }
+
+            .collection1_name span {
+                font-size: 10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+	<div class="section lectures_sec" id="  lectures_sec">
+		<a href = "Index.html"><img src="Images/Logo 2.png" class="logo" alt="Museo Bulawan Logo"></a>
+
+        <div class="nav1">
+            <a class="nav1_btn" href="About.html">About Us</a>
+            <a class="nav1_btn" href="Events.html">Events</a>
+            <a class="nav1_btn" href="Services.html">Services</a>
+        </div>
+
+        <p class = "lectures_title"><b>LECTURE PLAYLIST</b></p>
+
+        <p class = "lectures_txt"><b>The YouTube Channel of Museo Bulawan offers a wealth of knowledge and captivating insights through its diverse collection of lectures, thoughtfully organized into playlists based on their respective categories. Each lecture serves as a virtual gateway to a deeper understanding of various subjects, ranging from local history and cultural traditions to art and archaeology. The knowledgeable speakers delve into the intricacies of their respective fields, sharing fascinating anecdotes, research findings, and interpretations that shed light on Camarines Norte's rich heritage. Whether one is seeking to explore the region's indigenous roots, uncover the untold stories behind historical events, or gain a fresh perspective on art forms, these lectures provide an engaging and educational experience for viewers eager to delve into the depths of Camarines Norte's cultural tapestry.</b>
+        </p>
+
+        <div class = "lecture1">
+            <iframe src="https://www.youtube.com/embed/k56N2xTTOhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p class = "lecture_title2"><b><i>What's inside the museum?</i></b></p>
+            <a class="see_playlist_btn" id="image-button" href="https://www.youtube.com/watch?v=k56N2xTTOhk&list=PL0sn9LI6vHLnStiTujFAJAOPB4FLE1fvk " target="_blank"><b>VISIT PLAYLIST ➤</b></a>
+        </div>
+
+        <div class = "lecture2">
+            <iframe src="https://www.youtube.com/embed/p4KyiGW6Wqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p class = "lecture_title2"><b><i>Talakayan sa Museo</i></b></p>
+            <a class="see_playlist_btn" id="image-button" href="https://www.youtube.com/watch?v=p4KyiGW6Wqo&list=PL0sn9LI6vHLkYhCnRzSL8hwx-1L5T_dKg" target="_blank"><b>VISIT PLAYLIST ➤</b></a>
+        </div>
+
+        <div class = "lecture3">
+            <iframe src="https://www.youtube.com/embed/zYPPRPbViu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p class = "lecture_title2"><b><i>159th Birth Anniversary<br>OF GAT. JOSE P. RIZAL</i></b></p>
+            <a class="see_playlist_btn" id="image-button" href="https://www.youtube.com/watch?v=zYPPRPbViu0&list=PL0sn9LI6vHLlhdFvhcUoapqD-kWWClbNS" target="_blank"><b>VISIT PLAYLIST ➤</b></a>
+        </div>
+    </div>
+    
+	<div class="section artifacts1_sec" id = "artifacts1_sec">
+
+        <p class = "artifacts_title"><b>ARTIFACTS</b></p>
+
+        <p class = "artifacts_txt"><b>Nestled in the enchanting province of Camarines Norte, Museo Bulawan houses a treasure trove of artifacts that tell the captivating stories of the region's rich history and cultural heritage. Stepping into this museum is like embarking on a journey through time, as each artifact offers a glimpse into the past. From intricate indigenous crafts to Spanish colonial relics and remnants of the Japanese-Filipino war, the exhibits at Museo Bulawan evoke a sense of awe and fascination. Whether it's ancient pottery, traditional textiles, or vintage photographs, these artifacts serve as tangible links to the people and events that have shaped Camarines Norte. The museum stands as a testament to the profound value of preserving and celebrating the vibrant tapestry of the region's past, ensuring that its legacy lives on for generations to come.  </b>
+        </p>
+
+        <div id="product-viewer1">
+            <img id="frame" src="Artifacts/A1_1.png">
+        </div>
+          
+          <script>
+            const container = document.getElementById('product-viewer1');
+            const frame = document.getElementById('frame');
+            const images = ['Artifacts/A1_1.png', 'Artifacts/A1_1.png','Artifacts/A1_2.png','Artifacts/A1_2.png','Artifacts/A1_3.png','Artifacts/A1_3.png','Artifacts/A1_4.png','Artifacts/A1_4.png','Artifacts/A1_5.png','Artifacts/A1_5.png','Artifacts/A1_6.png','Artifacts/A1_6.png','Artifacts/A1_7.png','Artifacts/A1_7.png','Artifacts/A1_8.png','Artifacts/A1_8.png','Artifacts/A1_9.png','Artifacts/A1_9.png','Artifacts/A1_10.png','Artifacts/A1_10.png','Artifacts/A1_11.png','Artifacts/A1_11.png'];
+            const frameCount = images.length;
+            let currentIndex = 0;
+            let sensitivity = 500; 
+            container.addEventListener('mousemove', (event) => {
+                const containerRect = container.getBoundingClientRect();
+                const mouseX = event.clientX - containerRect.left;
+                const halfWidth = containerRect.width / sensitivity;
+
+                if (mouseX < halfWidth) {
+                    currentIndex = (currentIndex + frameCount - 1) % frameCount;
+                } else {
+                    currentIndex = (currentIndex + 1) % frameCount;
+                }
+
+                frame.src = images[currentIndex];
+            });
+          </script>
+
+        <p class = "artifacts1_title"><b>Iron</b></p>
+
+        <p class = "artifacts1_txt"><b>The invention of the Charcoal iron took place during the 15th century in response to the demand for well-pressed clothing. Initially, these irons were constructed using metal materials such as cast iron or iron. They featured a singular structure with a hinged lid at the back, allowing for easy opening and closing. To generate the required heat for ironing, these irons were placed in hot coals. Additionally, a wooden handle was affixed to the top of the lid, serving as a protective measure to prevent burns while handling the iron during the ironing process.</b>
+        </p>
+    </div>
+
+	<div class="section artifacts2_sec">
+        <div id="product-viewer2">
+            <img id="frame1" src="Artifacts/A2_1.png">
+          </div>
+          
+          <script>
+            const container1 = document.getElementById('product-viewer2');
+            const frame1 = document.getElementById('frame1');
+            const images1 = ['Artifacts/A2_1.png','Artifacts/A2_2.png','Artifacts/A2_3.png','Artifacts/A2_4.png','Artifacts/A2_5.png','Artifacts/A2_6.png','Artifacts/A2_7.png','Artifacts/A2_8.png','Artifacts/A2_9.png','Artifacts/A2_10.png','Artifacts/A2_11.png','Artifacts/A2_12.png','Artifacts/A2_13.png','Artifacts/A2_14.png','Artifacts/A2_15.png','Artifacts/A2_16.png','Artifacts/A2_17.png',];
+            const frameCount1 = images1.length;
+            let currentIndex1 = 0;
+            let sensitivity1 = 500; 
+
+            container1.addEventListener('mousemove', (event) => {
+                const containerRect = container1.getBoundingClientRect();
+                const mouseX = event.clientX - containerRect.left;
+                const halfWidth = containerRect.width / sensitivity1;
+
+                if (mouseX < halfWidth) {
+                    currentIndex1 = (currentIndex1 + frameCount1 - 1) % frameCount1;
+                } else {
+                    currentIndex1 = (currentIndex1 + 1) % frameCount1;
+                }
+
+                frame1.src = images1[currentIndex1];
+            });
+          </script>
+        <p class = "artifacts2_title"><b>Radio</b></p>
+        <p class = "artifacts2_txt"><b>Telefunken Vintage Radio are a testament to the timeless beauty of mid-20th century design and engineering. These iconic radios boast a striking blend of artistry and functionality, with their sleek wooden cabinets, intricate grille patterns, and polished knobs. Crafted with meticulous attention to detail, Telefunken Vintage Radios not only serve as functional audio devices but also as elegant pieces of decor that evoke a sense of nostalgia and charm.</b>
+        </p>
+
+        <div id="product-viewer3">
+            <img id="frame2" src="Artifacts/A3_1.png">
+          </div>
+          
+          <script>
+            const container2 = document.getElementById('product-viewer3');
+            const frame2 = document.getElementById('frame2');
+            const images2 = ['Artifacts/A3_1.png','Artifacts/A3_2.png','Artifacts/A3_3.png','Artifacts/A3_4.png','Artifacts/A3_5.png','Artifacts/A3_6.png','Artifacts/A3_7.png','Artifacts/A3_8.png','Artifacts/A3_9.png','Artifacts/A3_10.png','Artifacts/A3_11.png','Artifacts/A3_12.png','Artifacts/A3_13.png','Artifacts/A3_14.png','Artifacts/A3_15.png','Artifacts/A3_16.png','Artifacts/A3_17.png','Artifacts/A3_18.png','Artifacts/A3_19.png'];
+            const frameCount2 = images2.length;
+            let currentIndex2 = 0;
+            let sensitivity2 = 500; 
+
+            container2.addEventListener('mousemove', (event) => {
+                const containerRect = container2.getBoundingClientRect();
+                const mouseX = event.clientX - containerRect.left;
+                const halfWidth = containerRect.width / sensitivity2;
+
+                if (mouseX < halfWidth) {
+                    currentIndex2 = (currentIndex2 + frameCount2 - 1) % frameCount2;
+                } else {
+                    currentIndex2 = (currentIndex2 + 1) % frameCount2;
+                }
+
+                frame2.src = images2[currentIndex2];
+            });
+          </script>
+        <p class = "artifacts3_title"><b>Teapot</b></p>
+        <p class = "artifacts3_txt"><b>The personalized antique hand-painted teapot is a true work of art, showcasing intricate and delicate brushstrokes that make it one-of-a-kind. Crafted with precision and care, every detail on the teapot is meticulously hand-painted, adding a touch of elegance and uniqueness. With its personalized design, this teapot serves as a cherished heirloom, a beautiful centerpiece for any tea-time gathering, and a reminder of the artistic craftsmanship of the past.</b>
+        </p>
+
+        <div id="product-viewer4">
+            <img id="frame3" src="Artifacts/A4_1.png">
+          </div>
+          
+          <script>
+            const container3 = document.getElementById('product-viewer4');
+            const frame3 = document.getElementById('frame3');
+            const images3 = ['Artifacts/A4_1.png','Artifacts/A4_2.png','Artifacts/A4_3.png','Artifacts/A4_4.png','Artifacts/A4_5.png','Artifacts/A4_6.png','Artifacts/A4_7.png','Artifacts/A4_8.png','Artifacts/A4_9.png','Artifacts/A4_10.png','Artifacts/A4_11.png','Artifacts/A4_12.png','Artifacts/A4_13.png','Artifacts/A4_14.png','Artifacts/A4_15.png','Artifacts/A4_16.png','Artifacts/A4_17.png','Artifacts/A4_18.png'];
+            const frameCount3 = images3.length;
+            let currentIndex3 = 0;
+            let sensitivity3 = 500; 
+
+            container3.addEventListener('mousemove', (event) => {
+                const containerRect = container3.getBoundingClientRect();
+                const mouseX = event.clientX - containerRect.left;
+                const halfWidth = containerRect.width / sensitivity3;
+
+                if (mouseX < halfWidth) {
+                    currentIndex3 = (currentIndex3 + frameCount3 - 1) % frameCount3;
+                } else {
+                    currentIndex3 = (currentIndex3 + 1) % frameCount3;
+                }
+
+                frame3.src = images3[currentIndex3];
+            });
+          </script>
+        <p class = "artifacts4_title"><b>Choco Coaster</b></p>
+        <p class = "artifacts4_txt"><b>The antique chocolate coaster resembles a traditional kettle with its distinctive design. Crafted with exquisite attention to detail, this pot showcases a charming combination of elegance and functionality. Made from durable materials, it features a long handle for easy maneuverability and a spout for precise pouring, allowing chocolatiers of the past to coat confections with a smooth, velvety layer of chocolate. </b>
+        </p>
+	</div>
+
+
+    <div class="section heroes1_sec" id="heroes1_sec">
+        <p class = "heroes_title"><b>LOCAL HEROES</b></p>
+        <p class = "heroes_txt"><b>In the province of Camarines Norte, a land rich in history and resilience, local heroes emerged during the tumultuous period of the Japanese-Filipino war. These brave individuals, driven by unwavering patriotism and a deep love for their homeland, stood as beacons of courage and resistance. Through their selfless acts and unwavering determination, they became symbols of hope, inspiring their fellow countrymen to fight against oppression. Their stories echo through the generations, reminding us of the indomitable spirit that resides within the hearts of the people of Camarines Norte and their enduring legacy as true local heroes.</b></p>
+
+        <p class = "heroe1_name">WENCESLAO Q. VINZONS SR.<br><span style = "font-family: 'Sukar Black'; font-size: 2.7vw;">(1910-1942)</span></p>
+        <p class = "heroe1_txt"><b>Born on September 28, 1910, at Indan (now Vinzons), Camarines Norte, he had manifested signs of extraordinary brilliance at an early age. He went to school at six, finishing his elementary and high school as class valedictorian in less time than required.<br>
+            He is the son of Gabino V. Vinzons and Engracia Quinito, He took his elementary education in his hometown and finished his secondary education at the Camarines Norte High School as valedictorian. He obtained his Bachelor of Laws from the University of the Philippines. <br>
+                In 1927, he enrolled at the University of the Philippines and became a student leader par excellence. He excelled in forensics and oration.<br>
+            He was an awardee of the Manuel L. Quezon gold medal for excellence for his oration entitled “Malaysia Irredenta” and the Abad Santos medal for excellence in debate. He was editor-in-chief of the UP’s Philippine Collegian, president of the student council, and member of the Upsilon Sigma Phi fraternity. <br>
+            In 1932, he led the youth movement in protest against the salary increase of the members of the Manila Municipal Council.<br>
+                         In his junior year, he edited the Philippine Collegian, co-founded the College Editors Guild, and became its first president. As president of the UP-Student Council, he led demonstrations against the now infamous “Festin Rider,” an attempt by the legislators to increase their salary.<br>
+            In 1933, he placed third in the bar examination. He won a seat in the Constitutional Convention in 1934 at the age of 23. He was voted most outstanding young man in politics before the war. He founded the young Philippines Party , Together with Arturo Tolentino, Teodoro Kalaw, Lorenzo Sumulong, Carmen Planas and Avelina Lorenzana (now Mrs. Camilo Osias), he waged an incessant campaign for clean government and autonomy.<br>
+                         On July 10, 1934, he won a seat in the Constitutional Convention and became the youngest signer of the Constitution.<br>
+            He was one of those responsible for making Tagalog the national language of the Filipinos. In the 19335 elections, he supported General Emilio Aguinaldo for presidency against President Manuel L. Quezon. He went from province to province explaining the necessity of having a balanced two-party system to prevent abuses, corruption and inefficiency in governmental affairs. Bitterly critical of the administration, he was charged with libel and sedition after the election. The Cavite Court of the First Instance sentenced him to jail, but the Court of Appeals acquitted him.<br>
+            In 1940, At the age of 30, he was elected governor of Camarines Norte. Later he was chosen as the “Outstanding Young Man in the Philippine Politics” for his independence of mind, constructive approach to national problems, courage, and consistency.<br>
+            In 1941, he was elected Congressman of his province.<br>
+                         He led a fierce-fighting guerilla group in Bicol when the war broke out. After the fall of the Philippines, he refused to surrender and fled to the mountain to continue to struggle.<br>
+                         The Japanese Imperial Forces in the region organized an extensive manhunt to comb the forest of Camarines Norte and captured Vinzons in Batong Bakal, in the town of Labo. Refusing to join the enemy’s fold or lay down his arms, He was killed together with his wife, Liwayway Gonzales, his father, a sister, and teo children. Their remains have never been discovered.<br>
+                His hometown Indan, was rename after him, In Manila, near Blumentritt, a school is named Wenceslao Vinzons Elementary School. The Student Center of UP bears his name.</b></p>
+    </div>
+
+    <div class="section heroes2_sec">
+        <p class = "heroe2_name">JOSE MARIA E. PANGANIBAN<br><span style = "font-family: 'Sukar Black'; font-size: 2.7vw;">(1863-1890)</span></p>
+        <p class = "heroe2_txt"><b>On December 1, 1934, Act No. 4155 renamed the mining town of Mambulao, Camarines Norte to Maria Panganiban in honor of the great propagandist who died in Spain while in pursuit of reforms in the Philippines during the Spanish colonial period. <br>
+            Jose Maria Panganiban was born in Mambulao, Camarines on February 1, 1863. He was the eldest of the three sons of Vicente Panganiban, a native of Hagonoy, Bulacan and Juana Enverga, a native of Mauban, Tayabas (now Quezon).<br>
+            Panganiban developed his interest in reading at an early age from reading the cartilla, caton and catecismo taught by his mother. Once, his mother found him under a tree, sleeping obviously from reading Don Quixote, the book of Cervantes, found beside him.<br>
+            Since his mother died when he was a little boy, Panganiban grew up in the care of his father, the clerk of court in Daet, the capital town of the province. His father sent him to the seminary of Nueva Caceres (now Naga) and became the protégé of the seminary rector Fr. Santonja. <br>
+            He earned the praises of his teachers because of his aptitude to easily absorb his lessons. He was good at writing and was articulate in expressing his ideas. Because of this, the Spanish Governor-General Domingo Moriones who happened to be visiting the province and heard him speak during a school program commended him. <br>
+            In April 1878, he wrote A Nuestro Obispo in honor of Bishop Francisco Gainza who was on a visit to Mambulao. Father Santoja became instrumental for Panganiban’s studies in Manila. The priest recommended him to the College of San Juan de Letran where he obtained his degree of Bachelor of Arts in 1883. <br>
+            Wanting to become a medical practitioner, he took up medical courses at the University of Santo Tomas and at the same time taking vocational courses in agriculture at Letran so that in 1885, he received the title of Agricultural Expert.<br>
+            Panganiban participated in literary scientific contests at the UST and earned prizes. The first was in 1885 when he won second place. In 1887, he won first prized for each of his three papers on General Pathology, Therapeutics and Surgical Anatomy. <br>
+            Fr. Gregorio Echevarria, the rector of the University, had his works printed and exhibited in the Exposition of 1887 in Madrid. In May 1888, Panganiban sailed for Spain and continued his medical studies at the
+            University of Barcelona, where he met other Filipino students. <br>
+            Drawn to the propaganda movement, Panganiban quit his dream of becoming a doctor. He joined liberal organizations like the Asociacion Hispano-Filipino and the La Solidaridad that both of which aimed for reforms in the Philippines. <br>
+            On April 25, 1889, Panganiban was one of the signers of the petition to the Spanish Minister of Colonies, requesting for Filipino representation in the Spanish Cortes. While in Spain, he learned other languages like German, Italian, and French, adding to the Spanish and Latin he learned during his student days in the seminary of Nueva Caceres. He was able to translate into Spanish the book of German author Carl Julius Weber entitled: Die Religio und Die Religionen.
+            </b></p>
+
+            <a class="moreheroes" id="image-button" href="Heroes.html"><b>SEE MORE &nbsp;&nbsp;&nbsp;⮞</b></a>
+    </div>
+
+    <div class="section heroes3_sec">
+    </div>
+
+    <div class="section collections1_sec" id="collections1_sec">
+        <p class = "collections1_title"><b>PENTIMENTO</b></p>
+        <p class = "collections1_txt"><b>Pentimento is a painting over a painting that is  beautifully brought to life by the talented painter <a href="https://www.facebook.com/ReiVan11" target="_blank">Aryel Villanueva</a>. With a unique blend of skill and creativity, Vilalanueva showcases his remarkable artworks in various exhibitions, ranging from bustling malls to prestigious museums. His paintings possess a captivating quality that captures the essence of his subjects, inviting viewers into a world of vivid imagination and emotional depth.  </b></p>
+    </div>
+
+
+    <div class="section collections3_sec">
+        <img class = "collection2_pic1" src="Images/Collection1_Art1.jpeg" alt="Collection 1"  onclick="toggleFullScreen(this);"  style = "cursor: pointer;">
+        <p class = "art3_name1">SERENITY<br><span style = "font-family: 'Sukar Black'; font-size: 1.3vw;">OIL ON CANVAS</span></p>
+
+        <img class = "collection2_pic2" src="Images/Collection1_Art3.jpeg" alt="Collection 1"  onclick="toggleFullScreen(this);"  style = "cursor: pointer;">
+        <p class = "art3_name2">BELLEZA<br><span style = "font-family: 'Sukar Black'; font-size: 1.3vw;">MIXED MEDIA ON PAPER</span></p>
+
+        <img class = "collection2_pic3" src="Images/Collection1_Art2.jpeg" alt="Collection 1"  onclick="toggleFullScreen(this);"  style = "cursor: pointer;">
+        <p class = "art3_name3">INFERNO<br><span style = "font-family: 'Sukar Black'; font-size: 1.3vw;">OIL ON CANVAS</span></p>
+    </div>
+
+	<div class="section footer_sec">
+
+		<img class = "bulawan_logo" src="Images/Logo 1.png" alt="Museo Bulawan Logo">
+		<p class = "bulawan_title"><b>MUSEO BULAWAN</b></p>
+		<p class = "bulawan_tagline">"An Exponent of Cultural Development"</p>
+		<p class = "connect">CONNECT WITH US</p>
+
+		<div class="contacts">
+            <a href="https://www.facebook.com/museobulawancn" target="_blank">
+                <img src="Contacts/Facebook.png" alt="Facebook">
+            </a>
+            <a href="https://m.me/museobulawancn" target="_blank">
+                <img src="Contacts/Messenger.png" alt="Messenger">
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=bulawanmuseo@gmail.com&su=New%20Message" target="_blank">
+                <img src="Contacts/Gmail.png" alt="Gmail" title="Open Gmail">
+            </a>
+            <a href="https://instagram.com/museobulawan?igshid=YmMyMTA2M2Y=" target="_blank">
+                <img src="Contacts/Instagram.png" alt="Instagram">
+            </a>
+        </div>
+	</div>
+
+    <script>
+		function toggleFullScreen(img) {
+			if (!document.fullscreenElement) {
+				img.requestFullscreen();
+			} else {
+				document.exitFullscreen();
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Museo Bulawan Official</title>
+	<link rel="icon" href="Images/Logo 1.png">
+    <link rel="stylesheet" type="text/css" href="Services.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+	<div class="section services_sec">
+		<a href = "Index.html"><img src="Images/Logo 2.png" class="logo" alt="Museo Bulawan Logo"></a>
+
+        <div class="nav1">
+            <a class="nav1_btn" href="About.html">About Us</a>
+            <a class="nav1_btn" href="Events.html">Events</a>
+            <a class="nav1_btn" href="Services.html" style = "color:#FFD700">Services</a>
+        </div>
+
+        <div class="services_txt"><b>Museo Bulawan offers a range of services that cater to diverse needs, providing visitors and researchers with a comprehensive and enriching experience. Through visitation, individuals have the opportunity to explore the museum's captivating exhibits, immersing themselves in the rich history and cultural heritage of Camarines Norte. The museum also facilitates appointments for meetings and interviews, accommodating researchers, scholars, and enthusiasts who seek to delve deeper into specific subjects or engage in discussions with knowledgeable staff.</b><br><br>Download the file by clicking on the services listed below. Fill out the form and submit it to your preferred media, which can be found at the bottom of this page under "CONNECT WITH US."</div>
+
+        <div class = "services_btn">
+            <button class = "services_btn1" onClick="openvisitation()"><b>Visitation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇲</b></button>
+            <button class = "services_btn2" onClick="openmeetings()"><b>Meetings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇲</b></button>
+            <button class = "services_btn3" onClick="openinterviews()"><b>Interviews&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇲</b></button>
+        </div>
+
+        <script>
+            function openvisitation() {
+              window.open('Letters/Letter of Visitation in Museo Bulawan.docx');
+            }
+        </script>
+        <script>
+            function openmeetings() {
+              window.open('Letters/Letter for Meeting at Museo Bulawan.docx');
+            }
+        </script>
+        <script>
+            function openinterviews() {
+              window.open('Letters/Letter for Interview at Museo Bulawan.docx');
+            }
+        </script>
+
+        <script>
+            document.getElementById('services_btn1').addEventListener('click', function() {
+              var pdfUrl = 'Letters/Letter of Visitation in Museo Bulawan.pdf';
+              window.open(pdfUrl);
+            });
+          </script>
+
+        <script>
+            document.getElementById('services_btn2').addEventListener('click', function() {
+            var pdfUrl = 'path/to/your/pdf/file.pdf';
+            window.open(pdfUrl);
+            });
+        </script>
+
+        <script>
+            document.getElementById('services_btn3').addEventListener('click', function() {
+            var pdfUrl = 'path/to/your/pdf/file.pdf';
+            window.open(pdfUrl);
+            });
+        </script>
+
+    </div>
+
+	<div class="section footer_sec">
+
+		<img class = "bulawan_logo" src="Images/Logo 1.png" alt="Museo Bulawan Logo">
+		<p class = "bulawan_title"><b>MUSEO BULAWAN</b></p>
+		<p class = "bulawan_tagline">"An Exponent of Cultural Development"</p>
+		<p class = "connect">CONNECT WITH US</p>
+
+		<div class="contacts">
+            <a href="https://www.facebook.com/museobulawancn" target="_blank">
+                <img src="Contacts/Facebook.png" alt="Facebook">
+            </a>
+            <a href="https://m.me/museobulawancn" target="_blank">
+                <img src="Contacts/Messenger.png" alt="Messenger">
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=bulawanmuseo@gmail.com&su=New%20Message" target="_blank">
+                <img src="Contacts/Gmail.png" alt="Gmail" title="Open Gmail">
+            </a>
+            <a href="https://instagram.com/museobulawan?igshid=YmMyMTA2M2Y=" target="_blank">
+                <img src="Contacts/Instagram.png" alt="Instagram">
+            </a>
+        </div>
+	</div>
+</body>
+</html>

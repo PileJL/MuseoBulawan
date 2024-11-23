@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Museo Bulawan Official</title>
+    <link rel="icon" href="Images/Logo 1.png">
+    <link rel="stylesheet" type="text/css" href="EditEvents.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Backgrounds/LatestBG.png');
+        }
+    
+        .event_section {
+            background-image: url("Backgrounds/AllBG.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 0.1em;
+            display: flex;
+            flex-direction: row; 
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+        }
+    
+        .event_iframe {
+            border: none;
+            overflow: hidden;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            position: relative;
+            flex: 1;
+            width: 99vw; 
+        }
+    
+        #eventContainer {
+            display: none;
+            margin-top: 0;
+        }
+    
+        @media only screen and (max-width: 391px) {
+            .event_section {
+                padding: 1em;
+            }
+    
+            .event_iframe {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+    
+    <script>
+        window.addEventListener('resize', function () {
+            if (window.innerWidth <= 391 && !window.isMobileView) {
+                window.isMobileView = true;
+                location.reload();
+            } else if (window.innerWidth > 390 && window.isMobileView) {
+                window.isMobileView = false;
+                location.reload();
+            }
+        });
+    </script>
+    
+    
+</head>
+<body>
+
+    <div class="section latest_sec">
+        <a href="Index.html"><img src="Images/Logo 2.png" class="logo" alt="Museo Bulawan Logo"></a>
+
+        <div class="nav1">
+            <a class="nav1_btn" href="Signin.html">Logout</a>
+        </div>
+
+        <p class="latest_title"><b>LATEST<br>EVENTS</b></p>
+        <p id="month-year"></p>
+
+        <div class="icon-container">
+            <div class="icon">
+                <img class="edit_icons" id="open-overlay" src="Icons/add_icon.png" onclick="showOverlay()">
+            </div>
+        </div>
+
+        <div id="overlay">
+            <div id="overlay-content">
+                <p id="add_event_title">
+                    ADD EVENT
+                </p>
+                <!-- add event form -->
+                <form id="add_event_form">
+                    <span class="close-btn" onclick="hideOverlay()">&times;</span>
+                    <input id="add_event_field" type="text" name="link" placeholder="Paste the link here">
+                    <button id="add_event_button" type="submit">ADD</button>
+                    <div id="success_message" class="alert" style="display: none;">Event Added Successfully</div>
+                    <div id="invalid_message" class="alert" style="display: none;">Invalid iframe link</div>
+                </form>
+            </div>
+        </div>
+
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyDpfb3ZVikVV4KOucKM44ynFkdLd-P9r5Y",
+                authDomain: "museobulawan-29287.firebaseapp.com",
+                databaseURL: "https://museobulawan-29287-default-rtdb.firebaseio.com",
+                projectId: "museobulawan-29287",
+                storageBucket: "museobulawan-29287.appspot.com",
+                messagingSenderId: "654469372747",
+                appId: "1:654469372747:web:2a4c173cce1fcd1d9626ce",
+                measurementId: "G-1WR6DKMNH2"
+            };
+            const app = firebase.initializeApp(firebaseConfig); // initialize firebase
+            var add_event_databaseRef = firebase.database().ref('Events'); // database ref for events
+
+            document.getElementById("add_event_form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                addEvent();
+            });
+
+            var iframeLinks = [];
+
+            function showOverlay() {
+                var overlay = document.getElementById("overlay");
+                overlay.style.display = "block";
+            }
+
+            function hideOverlay() {
+                var overlay = document.getElementById("overlay");
+                overlay.style.display = "none";
+                clearForm();
+            }
+
+            function clearForm() {
+                var addEventForm = document.getElementById("add_event_form");
+                addEventForm.reset();
+                hideSuccessMessage();
+                hideInvalidMessage();
+            }
+
+            function addEvent() {
+                var link = document.getElementById("add_event_field").value.trim();
+
+                if (link !== "") {
+                    if (isValidIframeLink(link)) {
+                        iframeLinks.unshift(link);
+                        displayEvents();
+                        hideOverlay();
+                        showEventContainer();
+                        showSuccessMessage();
+                        clearForm();
+
+                        var newAddEventForm = add_event_databaseRef.push();
+                        var timestamp = firebase.database.ServerValue.TIMESTAMP;
+                        var date = new Date(timestamp);
+                        var formattedDate = date.toLocaleDateString("en-US", {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric"
+                        });
+
+                        var eventData = {
+                            link: link,
+                            timestamp: timestamp
+                        };
+
+                        newAddEventForm.set(eventData);
+                    } else {
+                        showInvalidMessage();
+                    }
+                }
+            }
+
+            function isValidIframeLink(link) {
+                var facebookLink = '<iframe src="https://www.facebook.com/plugins/post.php?href=';
+                return link.startsWith(facebookLink);
+            }
+
+            function showSuccessMessage() {
+                var successMessage = document.getElementById("success_message");
+                successMessage.style.display = "block";
+            }
+
+            function hideSuccessMessage() {
+                var successMessage = document.getElementById("success_message");
+                successMessage.style.display = "none";
+            }
+
+            function showInvalidMessage() {
+                var invalidMessage = document.getElementById("invalid_message");
+                invalidMessage.style.display = "block";
+            }
+
+            function hideInvalidMessage() {
+                var invalidMessage = document.getElementById("invalid_message");
+                invalidMessage.style.display = "none";
+            }
+
+            function addNewDiv() {
+                var eventContainer = document.getElementById("eventContainer");
+                var newDiv = document.createElement("div");
+                newDiv.className = "event_section";
+                eventContainer.appendChild(newDiv);
+            }
+
+            function displayEvents() {
+                var eventContainer = document.getElementById("eventContainer");
+                eventContainer.innerHTML = "";
+
+                var maxIframesPerDiv = 3;
+                var currentDiv = null;
+
+                for (var i = 0; i < iframeLinks.length; i++) {
+                    if (i % maxIframesPerDiv === 0) {
+                        currentDiv = document.createElement("div");
+                        currentDiv.className = "event_section";
+                        eventContainer.appendChild(currentDiv);
+                    }
+
+                    var postUrl = extractPostUrlFromIframeLink(iframeLinks[i]);
+
+                    var embeddedPostDiv = document.createElement("div");
+                    embeddedPostDiv.className = "fb-post";
+                    embeddedPostDiv.setAttribute("data-href", postUrl);
+                    embeddedPostDiv.setAttribute("data-width", "500");
+
+                    currentDiv.appendChild(embeddedPostDiv);
+                }
+
+                reloadFacebookSDK();
+            }
+
+            function extractPostUrlFromIframeLink(link) {
+                var urlParams = new URLSearchParams(link.split("?")[1]);
+                var postUrl = decodeURIComponent(urlParams.get("href"));
+                return postUrl;
+            }
+
+            function reloadFacebookSDK() {
+                if (window.FB) {
+                    window.FB.XFBML.parse();
+                } else {
+
+                    (function(d, s, id) {
+                        var js,
+                            fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    })(document, "script", "facebook-jssdk");
+                }
+            }
+
+            function showEventContainer() {
+                var eventContainer = document.getElementById("eventContainer");
+                eventContainer.style.display = "block";
+            }
+
+            function initialize() {
+                var date = new Date();
+                var month = date.toLocaleString("default", { month: "long" });
+                var year = date.getFullYear();
+                var monthYear = month + " " + year;
+                document.getElementById("month-year").innerHTML = monthYear;
+
+                add_event_databaseRef.on("child_added", function(snapshot) {
+                    var eventData = snapshot.val();
+                    iframeLinks.unshift(eventData.link);
+                    displayEvents();
+                    showEventContainer();
+                });
+
+                add_event_databaseRef.on("child_removed", function(snapshot) {
+                    var eventData = snapshot.val();
+                    var index = iframeLinks.indexOf(eventData.link);
+                    if (index !== -1) {
+                        iframeLinks.splice(index, 1);
+                        displayEvents();
+                    }
+                });
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                initialize();
+            });
+        </script>
+
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js"></script>
+
+        <script src="Index.js"></script>
+    </div>
+    <div id="eventContainer" class="event_iframe">
+        <div class="event_section">
+        </div>
+        <div class="event_section">
+        </div>
+        <div class="event_section">
+        </div>
+    </div>
+    
+
+</body>
+</html>

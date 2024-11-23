@@ -1,0 +1,237 @@
+@font-face {
+    font-family: "Sukar Black";
+    src: url("Fonts/Sukar black.ttf");
+    }
+
+@font-face {
+    font-family: "Core Narae Pro";
+    src: url("Fonts/Core narae Pro.ttf");
+    }
+
+@font-face {
+    font-family: "Lumios Marker";
+    src: url("Fonts/Lumios Marker.otf");
+    }
+
+@font-face {
+    font-family: "Charm";
+    src: url("Fonts/Charm.ttf");
+    }
+
+@font-face {
+    font-family: "Intro Rust";
+    src: url("Fonts/Intro Rust.otf");
+    }
+
+@font-face {
+    font-family: "Norwester";
+    src: url("Fonts/Norwester.otf");
+    }
+
+@font-face {
+    font-family: "Alyssum";
+    src: url("Fonts/Alyssum.otf");
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    }
+
+.section {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+.sigin_sec {
+    background-image: url('Backgrounds/SignInBG.png');
+    }
+
+.logo {
+    position:absolute;
+    top: 3vh;
+    left: 2vw;
+    height: auto;
+    width:6vw;
+    }
+
+.bulawan_logo {
+    position: absolute;
+    top: 13vh;
+    left: 46vw;
+    height: auto; 
+    width: 9vw;
+}
+
+.bulawan_title {
+    position: absolute;
+    top:27vh;
+    left:32vw;
+    width:37vw;
+    text-align: center;
+    font-size: 3.8vw;
+    font-family: "Intro Rust";
+    color:white;
+    text-shadow: 0.3vw 0px 0.3vw #000000a8;
+    }
+
+.bulawan_tagline {
+    position: absolute;
+    font-size: 2.5vw;
+    top:37vh;
+    width:37vw;
+    left:32vw;
+    font-family: "Lumios Marker";
+    text-align: center;
+    color:white;
+    }
+
+.signin {
+    position: absolute;
+    top: 53vh;
+    left: 31.3vw;
+    
+}
+
+.signin label {
+    font-size: 1.3vw;
+    font-family: "Arial";
+}
+
+.signin input {
+    margin-top: 1.8vh;
+    width:37vw;
+    font-size: 1.8vw;
+    background-color: transparent;
+    border: 0.4vw solid #715F37;
+    border-radius: 0.3vw;
+}
+
+.signin a {
+    font-family: "Arial";
+    float: right;
+    text-decoration: none;
+    color: black;
+    font-size: 1vw;
+    transition: font-size 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.signin #login_btn {
+    margin-top: 1.8vh;
+    width:14vw;
+    font-size: 1.8vw;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.2em;
+    border-radius: 0.8vw;
+    margin-left: 12vw;
+    transition: font-size 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.signin #login_btn:hover{
+    font-size: 2vw;
+}
+
+.signin a:hover{
+    font-size: 1.2vw;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 391px) {
+    .sigin_sec {
+        background-image: url('Backgrounds/SignInBG.png');
+        }
+
+    .logo {
+        position:absolute;
+        top: 3vh;
+        left: 5vw;
+        height: auto;
+        width:15vw;
+        }
+
+            
+    .bulawan_logo {
+        position: absolute;
+        top: 30vh;
+        left: 38vw;
+        height: auto; 
+        width: 25vw;
+    }
+
+    .bulawan_title {
+        position: absolute;
+        top:40vh;
+        left:10vw;
+        width:80vw;
+        text-align: center;
+        font-size: 9vw;
+        font-family: "Intro Rust";
+        color:white;
+        text-shadow: 0.3vw 0px 0.3vw #000000a8;
+        }
+
+    .bulawan_tagline {
+        position: absolute;
+        font-size: 5vw;
+        top:46vh;
+        width:80vw;
+        left:10vw;
+        font-family: "Lumios Marker";
+        text-align: center;
+        color:white;
+        }
+
+    .signin {
+        position: absolute;
+        top: 58vh;
+        left: 13vw;
+        
+    }
+
+    .signin label {
+        font-size: 4.5vw;
+        font-family: "Arial";
+    }
+
+    .signin input {
+        margin-top: 1.8vh;
+        width:70vw;
+        font-size: 5vw;
+        background-color: transparent;
+        border: 1vw solid #715F37;
+        border-radius: 5vw;
+        padding:0.3em;
+    }
+
+
+    .signin #login_btn {
+        margin-top: 1.8vh;
+        width:50vw;
+        font-size: 5vw;
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 0.2em;
+        border-radius: 3vw;
+        margin-left: 14vw;
+        transition: font-size 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .signin #login_btn:hover{
+        font-size: 5.2vw;
+    }
+
+    }

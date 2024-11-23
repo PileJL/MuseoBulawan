@@ -1,0 +1,1293 @@
+@font-face {
+    font-family: "Sukar Black";
+    src: url("Fonts/Sukar black.ttf");
+    }
+
+@font-face {
+    font-family: "Lumios Marker";
+    src: url("Fonts/Lumios Marker.otf");
+    }
+
+@font-face {
+    font-family: "Intro Rust";
+    src: url("Fonts/Intro Rust.otf");
+    }
+
+@font-face {
+    font-family: "Norwester";
+    src: url("Fonts/Norwester.otf");
+    }
+
+@font-face {
+    font-family: "Aileron-Heavy";
+    src: url("Fonts/Aileron-Heavy.otf");
+    }
+
+@font-face {
+    font-family: "LibreFranklin-Bold";
+    src: url("Fonts/LibreFranklin-Bold.ttf");
+    }
+
+@font-face {
+    font-family: "CS Gordon";
+    src: url("Fonts/CS Gordon.otf");
+    }
+
+@font-face {
+    font-family: "Charm";
+    src: url("Fonts/Charm.ttf");
+    }
+
+@font-face {
+    font-family: "Alyssum";
+    src: url("Fonts/Alyssum.otf");
+    }
+
+@font-face {
+    font-family: "Catamaran";
+    src: url("Fonts/Catamaran.ttf");
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    }
+
+.section {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+.lectures_sec {
+    background-image: url('Backgrounds/LecturesBG.png');
+    }
+
+.logo {
+    position:absolute;
+    top: 3vh;
+    left: 2vw;
+    height: auto;
+    width:6vw;
+    }
+
+.nav1 {
+    position: absolute;
+    top: 6.5vh;
+    left: 8.5vw;
+    align-items: center;
+    }
+
+.nav1_btn {
+    font-family: "Sukar Black";
+    font-size: 1.5vw;
+    padding: 0em 2em;
+    color:white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+    }
+
+.nav1_btn:hover {
+    font-size: 1.7vw;
+    border-radius: 5vw;
+    background-color: rgba(0, 0, 0, 0.1);
+    }
+
+.lectures_title {
+    position: absolute;
+    font-size: 5.3vw;
+    top:10vh;
+    left:15vw;
+    font-family: "CS Gordon";
+    text-align: center;
+    color:black;
+    text-shadow: 0.5vw 0px 0.5vw #ffffffda;
+    }
+
+.lectures_txt {
+    position: absolute; 
+    top:28vh;
+    left: 7.5vw; 
+    width: 78.5vw; 
+    font-size: 1vw; 
+    font-family: "Century Gothic";
+    color: white;
+    padding-left: 3.3%; 
+    padding-top: 3.5%;
+    padding-right: 3.3%;
+    padding-bottom: 0.7%;
+    text-align: center;
+}
+
+.lecture1 iframe {
+    position: absolute;
+    top: 57vh;
+    left: 7vw;
+    width: 24vw;
+    height: 26.6vh;
+}
+
+.lecture1 .lecture_title2 {
+    position: absolute;
+    top: 86vh;
+    left: 6vw;
+    color: white;
+    font-family: "CS Gordon";
+    font-size: 0.7vw;
+    padding-left: 1vw;
+    line-height: 0.5vh;
+    
+}
+
+.lecture1 .see_playlist_btn {
+    position: absolute;
+    top: 86vh;
+    left: 23vw;
+    font-family: "CS Gordon";
+    color: white;
+    padding: 0.5vw;
+    font-size: 0.6vw;
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.lecture2 iframe {
+    position: absolute;
+    top: 57vh;
+    left: 37.5vw;
+    width: 24vw;
+    height: 26.6vh;
+}
+
+.lecture2 .lecture_title2 {
+    position: absolute;
+    top: 86vh;
+    left: 36.5vw;
+    color: white;
+    font-family: "CS Gordon";
+    font-size: 0.7vw;
+    padding-left: 1vw;
+    line-height: 0.5vh;
+    
+}
+
+.lecture2 .see_playlist_btn {
+    position: absolute;
+    top: 86vh;
+    left: 53.5vw;
+    font-size: 0.6vw;
+    font-family: "CS Gordon";
+    color: white;
+    padding: 0.5vw;
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.lecture3 iframe {
+    position: absolute;
+    top: 57vh;
+    right: 7vw;
+    width: 24vw;
+    height: 26.6vh;
+}
+
+.lecture3 .lecture_title2 {
+    position: absolute;
+    top: 85vh;
+    right: 17vw;
+    color: white;
+    font-family: "CS Gordon";
+    font-size: 0.7vw;
+    padding-left: 1vw;
+    line-height: 2vh;
+    
+}
+
+.lecture3 .see_playlist_btn {
+    position: absolute;
+    top: 86vh;
+    right: 6.5vw;
+    font-size: 0.6vw;
+    font-family: "CS Gordon";
+    color: white;
+    padding: 0.5vw;
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.see_playlist_btn:hover{
+    font-size: 0.8vw;
+    border-radius: 15vw;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.artifacts1_sec {
+    background-image: url('Backgrounds/ArtifactsBG1.png');
+    }
+
+.artifacts_title {
+    position: absolute;
+    top:100vh;
+    left:27vw;
+    font-size: 6vw;
+    font-family: "CS Gordon";
+    text-align: center;
+    color:black;
+    text-shadow: 0.5vw 0px 0.5vw #ffffffde;
+    }
+
+.artifacts_txt {
+    position: absolute; 
+    top:121vh;
+    left: 7.2vw; 
+    width: 78.5vw; 
+    font-size: 1vw; 
+    font-family: "Century Gothic";
+    color: white;
+    padding-left: 3.3%; 
+    padding-top: 3.5%;
+    padding-right: 3.3%;
+    padding-bottom: 0.7%;
+    text-align: center;
+}   
+
+#product-viewer1 img {
+    position: absolute;
+    top: 144.5vh;
+    left: 12vw;
+    width: 25vw;
+}
+
+.artifacts1_title {
+    position: absolute;
+    top:136vh;
+    right:26vw;
+    font-size: 5vw;
+    font-family: "Charm";
+    text-align: center;
+    color:white;
+    }
+
+.artifacts1_txt {
+    position: absolute; 
+    top:158vh;
+    right: 7.5vw; 
+    width: 46vw; 
+    font-size: 1vw; 
+    font-family: "Century Gothic";
+    color: white;
+    text-align: justify;
+}   
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.artifacts2_sec {
+    background-image: url('Backgrounds/ArtifactsBG2.png');
+    }
+
+#product-viewer2 img {
+    position: absolute;
+    top: 186vh;
+    right: 13vw;
+    width: 25vw;
+}
+
+.artifacts2_title {
+    position: absolute;
+    top:175vh;
+    left:25vw;
+    font-size: 5vw;
+    font-family: "Charm";
+    text-align: center;
+    color:white;
+    }
+
+.artifacts2_txt {
+    position: absolute; 
+    top:197vh;
+    left: 7.5vw; 
+    width: 46vw; 
+    font-size: 1vw; 
+    font-family: "Century Gothic";
+    color: white;
+    text-align: justify;
+}   
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#product-viewer3 img {
+    position: absolute;
+    top: 221vh;
+    left: 9vw;
+    width: 27vw;
+}
+
+.artifacts3_title {
+    position: absolute;
+    top:216vh;
+    right:24vw;
+    font-size: 5vw;
+    font-family: "Charm";
+    text-align: center;
+    color:white;
+    }
+
+.artifacts3_txt {
+    position: absolute; 
+    top:240vh;
+    right: 7.5vw; 
+    width: 46vw; 
+    font-size: 1vw; 
+    font-family: "Century Gothic";
+    color: white;
+    text-align: justify;
+}   
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#product-viewer4 img {
+    position: absolute;
+    top: 261vh;
+    right: 13vw;
+    width: 25vw;
+}
+
+.artifacts4_title {
+    position: absolute;
+    top:254vh;
+    left:18vw;
+    font-size: 5vw;
+    font-family: "Charm";
+    text-align: center;
+    color:white;
+    }
+
+.artifacts4_txt {
+    position: absolute; 
+    top:275vh;
+    left: 7.5vw; 
+    width: 46vw; 
+    font-size: 1vw; 
+    font-family: "Century Gothic";
+    color: white;
+    text-align: justify;
+}   
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.heroes1_sec {
+    background-image: url('Backgrounds/HeroesBG1.png');
+    }
+
+.heroes_title {
+    position: absolute;
+    font-size: 5.7vw;
+    top:300vh;
+    left:27vw;
+    font-family: "Alyssum";
+    text-align: center;
+    color:white;
+    text-shadow: 0.5vw 0px 0.5vw #000000af;
+    }
+
+.heroes_txt {
+    position: absolute; 
+    top:322vh;
+    left: 7.5vw; 
+    width: 78.5vw; 
+    font-size: 1.2vw; 
+    font-family: "Century Gothic";
+    color: white;
+    padding-left: 3.3%; 
+    padding-top: 3.5%;
+    padding-right: 3.3%;
+    padding-bottom: 0.7%;
+    text-align: center;
+}
+
+.heroe1_name {
+    position: absolute;
+    font-size: 3.8vw;
+    top:355vh;
+    right:10.2vw;
+    font-family: "Norwester";
+    text-align: center;
+    color:white;
+    text-shadow: 0.5vw 0px 0.5vw #000000af;
+    }
+
+.heroe1_txt {
+    position: absolute; 
+    top:382vh;
+    right: 4vw; 
+    width: 54vw; 
+    font-size: 0.9vw; 
+    font-family: "Century Gothic";
+    color: white;
+    text-align: justify;
+    line-height: 2.5vh;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.heroes2_sec {
+    background-image: url('Backgrounds/HeroesBG2.png');
+    }
+
+.heroe2_name {
+    position: absolute;
+    font-size: 3.8vw;
+    top:475vh;
+    left:10.5vw;
+    font-family: "Norwester";
+    text-align: center;
+    color:white;
+    text-shadow: 0.5vw 0px 0.5vw #000000af;
+    }
+
+.heroe2_txt {
+    position: absolute; 
+    top:503vh;
+    left: 4.3vw; 
+    width: 54vw; 
+    font-size: 0.9vw; 
+    font-family: "Century Gothic";
+    color: white;
+    text-align: justify;
+    line-height: 2.5vh;
+}
+
+  
+.moreheroes {
+    position: absolute;
+    top:588vh;
+    left:42vw;
+    width:15vw;
+    padding: 0.3em;
+    border: 0.12vw solid white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    border-radius: 1vw;
+    font-family: "Century Gothic";
+    font-size: 1.4vw;
+    transition: font-size 0.3s ease-in-out;
+    background-color: transparent;
+  }
+
+  .moreheroes:hover {
+    font-size: 1.6vw;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.heroes3_sec {
+    background-image: url('Backgrounds/HeroesBG3.png');
+    }
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.collections1_sec {
+    background-image: url('Backgrounds/CollectionsBG1.png');
+    }
+
+.collections1_title {
+    position: absolute;
+    font-size: 4vw;
+    top:599vh;
+    left:32vw;
+    font-family: "CS Gordon";
+    text-align: center;
+    color:black;
+    text-shadow: 0.5vw 0px 0.5vw #ffffffaf;
+    }
+
+.collections1_txt {
+    position: absolute; 
+    top:610vh;
+    left: 7.5vw; 
+    width: 78.5vw; 
+    font-size: 1.1vw; 
+    font-family: "Century Gothic";
+    color: black;
+    padding-left: 3.3%; 
+    padding-top: 3.5%;
+    padding-right: 3.3%;
+    padding-bottom: 0.7%;
+    text-align: center;
+}   
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.collections3_sec {
+    height:0vh;
+    background-image: url('Backgrounds/CollectionsBG3.png');
+    }
+
+.collection2_pic1 {
+    position: absolute;
+    top: 640vh;
+    left: 10vw;
+    width:20vw;
+    height:30vh;
+    z-index: 999;
+    border: 0.4vw solid black;
+    border-radius: 3vw;
+    transition: border-radius 0.3s ease-in-out
+}
+
+.collection2_pic1:hover {
+    border-radius: 2vw;
+}
+
+.art3_name1 {
+    position: absolute;
+    font-size: 2.2vw;
+    top:670vh;
+    left:15vw;
+    font-family: "Sukar Black";
+    text-align: center;
+    color:black;
+    line-height: 2vw;
+}
+
+
+.collection2_pic2 {
+    position: absolute;
+    top: 635vh;
+    left: 39vw;
+    width:20vw;
+    height:50vh;
+    z-index: 999;
+    border: 0.4vw solid black;
+    border-radius: 3vw;
+    transition: border-radius 0.3s ease-in-out
+}
+
+.collection2_pic2:hover {
+    border-radius: 2vw;
+}
+
+.art3_name2 {
+    position: absolute;
+    font-size: 2.2vw;
+    top: 685vh;
+    left:42vw;
+    font-family: "Sukar Black";
+    text-align: center;
+    color:black;
+    line-height: 2vw;
+}
+
+.collection2_pic3 {
+    position: absolute;
+    top: 640vh;
+    right: 10vw;
+    width:20vw;
+    height:35vh;
+    z-index: 999;
+    border: 0.4vw solid black;
+    border-radius: 3vw;
+    transition: border-radius 0.3s ease-in-out
+}
+
+.collection2_pic3:hover {
+    border-radius: 2vw;
+}
+
+.art3_name3 {
+    position: absolute;
+    font-size: 2.2vw;
+    top: 675vh;
+    right:16vw;
+    font-family: "Sukar Black";
+    text-align: center;
+    color:black;
+    line-height: 2vw;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_sec {
+    height: 60vh;
+    background-image: url('Backgrounds/FooterBG.png');
+    }
+
+.bulawan_logo {
+    position: absolute;
+    height: auto; 
+    width: 6.5vw;
+    top: 705vh;
+    left: 47vw;
+}
+
+.bulawan_title {
+    position: absolute;
+    font-size: 3.8vw;
+    top:713vh;
+    width:37vw;
+    left:32vw;
+    font-family: "Intro Rust";
+    text-align: center;
+    color:black;
+  }
+
+.bulawan_tagline {
+    position: absolute;
+    font-size: 2.7vw;
+    top:723vh;
+    width:37vw;
+    left:32vw;
+    font-family: "Lumios Marker";
+    text-align: center;
+    color:black;
+  }
+
+.connect {
+    position: absolute;
+    font-size: 2.4vw;
+    top:735vh;
+    width:20vw;
+    left:40vw;
+    font-family: "Norwester";
+    text-align: center;
+    color:black;
+    border: none;
+    border-top: 0.8vh solid black;
+  }
+
+.contacts {
+    position: absolute;
+    top:748vh;
+    left:38.7vw;
+}
+
+.contacts img {
+    width: 3.6vw;
+    margin: 0 1vw;
+    cursor: pointer;
+    transition: width 0.3s ease-in-out;
+}
+
+.contacts img:hover {
+    width: 4vw;
+}
+
+a {
+    text-decoration: none;
+    color: maroon;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 391px) {
+    .lectures_sec {
+        background-image: url('Mobile/LecturesBG.png');
+        }
+
+    .logo {
+        position:absolute;
+        top: 3vh;
+        left: 5vw;
+        height: auto;
+        width:15vw;
+        }
+
+    .nav1 {
+        position: absolute;
+        top:5.4vh;
+        left: 21vw;
+        align-items: center;
+        }
+    
+    .nav1_btn {
+        font-family: "Sukar Black";
+        font-size: 3.5vw;
+        padding: 0em 1em;
+        color:white;
+        cursor: pointer;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out;
+        }
+    
+    .nav1_btn:hover {
+        font-size: 3.7vw;
+        border-radius: 5vw;
+        background-color: rgba(0, 0, 0, 0.1);
+        }
+    
+    .lectures_title {
+        position: absolute;
+        font-size: 6.5vw;
+        top:10vh;
+        left:7.7vw;
+        font-family: "CS Gordon";
+        text-align: center;
+        color:black;
+        text-shadow: 0.5vw 0px 0.5vw #ffffffda;
+        }
+    
+    .lectures_txt {
+        position: absolute; 
+        top:15vh;
+        left: 1.5vw; 
+        width: 90vw; 
+        font-size: 2.5vw; 
+        font-family: "Century Gothic";
+        color: white;
+        padding-left: 3.3%; 
+        padding-top: 3.5%;
+        padding-right: 3.3%;
+        padding-bottom: 0.7%;
+        text-align: justify;
+    }
+    
+    .lecture1 iframe {
+        position: absolute;
+        top: 39vh;
+        left: 10.5vw;
+        width: 79vw;
+        height: 20vh;
+    }
+    
+    .lecture1 .lecture_title2 {
+        position: absolute;
+        top: 60vh;
+        left: 9vw;
+        color: white;
+        font-family: "CS Gordon";
+        font-size: 2vw;
+        padding-left: 1vw;
+        line-height: 0.5vh;
+        
+    }
+    
+    .lecture1 .see_playlist_btn {
+        position: absolute;
+        top: 61vh;
+        left: 56vw;
+        font-family: "CS Gordon";
+        color: white;
+        padding: 0.5vw;
+        font-size: 2.5vw;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out;
+    }
+    
+    .lecture2 iframe {
+        position: absolute;
+        top: 67vh;
+        left: 10.5vw;
+        width: 79vw;
+        height: 20vh;
+    }
+    
+    .lecture2 .lecture_title2 {
+        position: absolute;
+        top: 88vh;
+        left: 9vw;
+        color: white;
+        font-family: "CS Gordon";
+        font-size: 2vw;
+        padding-left: 1vw;
+        line-height: 0.5vh;
+        
+    }
+    
+    .lecture2 .see_playlist_btn {
+        position: absolute;
+        top: 89vh;
+        left: 56vw;
+        font-size: 2.5vw;
+        font-family: "CS Gordon";
+        color: white;
+        padding: 0.5vw;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out;
+    }
+    
+    .lecture3 iframe {
+        position: absolute;
+        top: 95vh;
+        left: 10.5vw;
+        width: 79vw;
+        height: 20vh;
+    }
+    
+    .lecture3 .lecture_title2 {
+        position: absolute;
+        top: 116vh;
+        left: 9vw;
+        color: white;
+        font-family: "CS Gordon";
+        font-size: 2vw;
+        padding-left: 1vw;
+        line-height: 1.8vh;
+        
+    }
+    
+    .lecture3 .see_playlist_btn {
+        position: absolute;
+        top: 117vh;
+        left: 56vw;
+        font-size: 2.5vw;
+        font-family: "CS Gordon";
+        color: white;
+        padding: 0.5vw;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out;
+    }
+    
+    .see_playlist_btn:hover{
+        font-size: 2.7vw;
+        border-radius: 20vw;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .artifacts1_sec {
+        background-image: url('Mobile/LecturesBG.png');
+        }
+    
+    .artifacts_title {
+        position: absolute;
+        top:123vh;
+        left:22vw;
+        font-size: 7.5vw;
+        font-family: "CS Gordon";
+        text-align: center;
+        color:black;
+        text-shadow: 0.5vw 0px 0.5vw #ffffffde;
+        }
+    
+    .artifacts_txt {
+        position: absolute; 
+        top:130vh;
+        left: 1.5vw; 
+        width: 90vw;
+        font-size: 2.5vw; 
+        font-family: "Century Gothic";
+        color: white;
+        padding-left: 3.3%; 
+        padding-top: 3.5%;
+        padding-right: 3.3%;
+        padding-bottom: 0.7%;
+        text-align: justify;
+    }   
+    
+    #product-viewer1 img {
+        position: absolute;
+        top: 149vh;
+        left: 16vw;
+        width: 70vw;
+    }
+    
+    .artifacts1_title {
+        position: absolute;
+        top:167.5vh;
+        left:23vw;
+        font-size: 10vw;
+        font-family: "Charm";
+        text-align: center;
+        color:white;
+        }
+    
+    .artifacts1_txt {
+        position: absolute; 
+        top:178.5vh;
+        left: 10vw; 
+        width: 78.5vw; 
+        font-size: 2.5vw; 
+        font-family: "Century Gothic";
+        color: white;
+        text-align: justify;
+    }   
+    
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .artifacts2_sec {
+        background-image: url('Mobile/ArtifactsBG1.png');
+        }
+    
+    #product-viewer2 img {
+        position: absolute;
+        top: 196vh;
+        left: 11vw;
+        width: 70vw;
+    }
+    
+    .artifacts2_title {
+        position: absolute;
+        top:213.5vh;
+        left:36.5vw;
+        font-size: 10vw;
+        font-family: "Charm";
+        text-align: center;
+        color:white;
+        }
+    
+    .artifacts2_txt {
+        position: absolute; 
+        top:224.5vh;
+        left: 10vw; 
+        width: 78.5vw; 
+        font-size: 2.5vw; 
+        font-family: "Century Gothic";
+        color: white;
+        text-align: justify;
+    }   
+    
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    #product-viewer3 img {
+        position: absolute;
+        top: 239vh;
+        left: 14vw;
+        width: 70vw;
+    }
+    
+    .artifacts3_title {
+        position: absolute;
+        top:256.5vh;
+        left:24vw;
+        font-size: 10vw;
+        font-family: "Charm";
+        text-align: center;
+        color:white;
+        }
+        
+    .artifacts3_txt {
+        position: absolute; 
+        top:267.5vh;
+        left: 10vw; 
+        width: 78.5vw; 
+        font-size: 2.5vw; 
+        font-family: "Century Gothic";
+        color: white;
+        text-align: justify;
+    }   
+    
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    
+    #product-viewer4 img {
+        position: absolute;
+        top: 284vh;
+        left: 13vw;
+        width: 70vw;
+    }
+    
+    .artifacts4_title {
+        position: absolute;
+        top:303.5vh;
+        left:24vw;
+        font-size: 10vw;
+        font-family: "Charm";
+        text-align: center;
+        color:white;
+        }
+    
+    .artifacts4_txt {
+        position: absolute; 
+        top:314.5vh;
+        left: 10vw; 
+        width: 78.5vw; 
+        font-size: 2.5vw; 
+        font-family: "Century Gothic";
+        color: white;
+        text-align: justify;
+    }   
+
+    /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .heroes1_sec {
+        background-image: url('Mobile/ArtifactsBG2.png');
+        }
+    
+    .heroes_title {
+        position: absolute;
+        font-size: 7.5vw;
+        top:335vh;
+        left:20vw;
+        font-family: "Alyssum";
+        text-align: center;
+        color:black;
+        text-shadow: 0.5vw 0px 0.5vw #000000af;
+        }
+    
+    .heroes_txt {
+        position: absolute; 
+        top:358vh;
+        left: 7.5vw; 
+        width: 78.5vw; 
+        font-size: 2.5vw; 
+        font-family: "Century Gothic";
+        color: white;
+        padding-left: 3.3%; 
+        padding-top: 3.5%;
+        padding-right: 3.3%;
+        padding-bottom: 0.7%;
+        text-align: justify;
+    }
+    
+    .heroe1_name {
+        position: absolute;
+        font-size:7vw;
+        top:380vh;
+        left:10.2vw;
+        line-height: 3vh;
+        font-family: "Norwester";
+        text-align: center;
+        color:white;
+        text-shadow: 0.5vw 0px 0.5vw #000000af;
+        }
+    
+    .heroe1_txt {
+        position: absolute; 
+        top:390vh;
+        left: 11vw; 
+        width:78vw;
+        font-size: 2.5vw; 
+        font-family: "Century Gothic";
+        color: white;
+        text-align: justify;
+        line-height: 1.5vh;
+    }
+    
+    /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .heroes2_sec {
+        background-image: url('Backgrounds/HeroesBG2.png');
+        }
+    
+    .heroe2_name {
+        position: absolute;
+        font-size:7vw;
+        top:492vh;
+        left:10.2vw;
+        line-height: 3vh;
+        font-family: "Norwester";
+        text-align: center;
+        color:white;
+        text-shadow: 0.5vw 0px 0.5vw #000000af;;
+        }
+    
+    .heroe2_txt {
+        position: absolute; 
+        top:502vh;
+        left: 11vw; 
+        width:78vw;
+        font-size: 2.5vw; 
+        font-family: "Century Gothic";
+        color: white;
+        text-align: justify;
+        line-height: 1.5vh;
+    }
+    
+      
+    .moreheroes {
+        position: absolute;
+        top:345vh;
+        left:26vw;
+        width:45vw;
+        padding: 0.3em;
+        border: 0.12vw solid black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        color: black;
+        border-radius: 3.5vw;
+        font-family: "Century Gothic";
+        font-size: 3.8vw;
+        transition: font-size 0.3s ease-in-out;
+        background-color: transparent;
+      }
+    
+      .moreheroes:hover {
+        font-size: 4vw;
+    }
+    
+    /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .heroes3_sec {
+        background-image: url('Backgrounds/HeroesBG3.png');
+        }
+    /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .collections1_sec {
+        background-image: url('Backgrounds/CollectionsBG1.png');
+        }
+
+    .collections1_title {
+        position: absolute;
+        font-size: 7vw;
+        top:602vh;
+        left:18vw;
+        font-family: "CS Gordon";
+        text-align: center;
+        color:black;
+        text-shadow: 0.5vw 0px 0.5vw #ffffffaf;
+        }
+
+    .collections1_txt {
+        position: absolute; 
+        top:608vh;
+        left: 7.5vw; 
+        width: 78.5vw; 
+        font-size: 2.5vw; 
+        font-family: "Century Gothic";
+        color: black;
+        padding-left: 3.3%; 
+        padding-top: 3.5%;
+        padding-right: 3.3%;
+        padding-bottom: 0.7%;
+        text-align: justify;
+    }   
+
+    /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .collections3_sec {
+        height:0vh;
+        background-image: url('Backgrounds/CollectionsBG3.png');
+        }
+
+    .collection2_pic1 {
+        position: absolute;
+        top: 625vh;
+        left: 11vw;
+        width:35vw;
+        height:15vh;
+        z-index: 999;
+        border: 1.5vw solid black;
+        border-radius: 3vw;
+        transition: border-radius 0.3s ease-in-out
+    }
+
+    .collection2_pic1:hover {
+        border-radius: 2vw;
+    }
+
+    .art3_name1 {
+        position: absolute;
+        font-size: 6vw;
+        top:630vh;
+        left:57vw;
+        font-family: "Sukar Black";
+        text-align: center;
+        color:black;
+        line-height: 2vw;
+    }
+
+
+    .collection2_pic2 {
+        position: absolute;
+        top: 665vh;
+        left: 11vw;
+        width:35vw;
+        height:25vh;
+        z-index: 999;
+        border: 1.5vw solid black;
+        border-radius: 3vw;
+        transition: border-radius 0.3s ease-in-out
+    }
+
+    .collection2_pic2:hover {
+        border-radius: 2vw;
+    }
+
+    .art3_name2 {
+        position: absolute;
+        font-size: 6vw;
+        top:675vh;
+        right:4vw;
+        font-family: "Sukar Black";
+        text-align: center;
+        color:black;
+        line-height: 2vw;
+    }
+
+    .collection2_pic3 {
+        position: absolute;
+        top: 645vh;
+        right: 11vw;
+        width:35vw;
+        height:15vh;
+        z-index: 999;
+        border: 1.5vw solid black;
+        border-radius: 3vw;
+        transition: border-radius 0.3s ease-in-out
+    }
+
+    .collection2_pic3:hover {
+        border-radius: 2vw;
+    }
+
+    .art3_name3 {
+        position: absolute;
+        font-size: 6vw;
+        top:650vh;
+        right:57vw;
+        font-family: "Sukar Black";
+        text-align: center;
+        color:black;
+        line-height: 2vw;
+    }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .footer_sec {
+        height: 20vh;
+        background-image: url('Mobile/FooterBG.png');
+        }
+
+    .bulawan_logo {
+        position: absolute;
+        top: 701.4vh;
+        left: 46vw;
+        height: auto; 
+        width: 10vw;
+    }
+
+    .bulawan_title {
+        position: absolute;
+        top:704.4vh;
+        left:30vw;
+        width:42vw;
+        text-align: center;
+        font-size: 4.5vw;
+        font-family: "Intro Rust";
+        color:black;
+    }
+
+    .bulawan_tagline {
+        position: absolute;
+        font-size: 3.7vw;
+        top:706.9vh;
+        width:48vw;
+        left:27vw;
+        font-family: "Lumios Marker";
+        text-align: center;
+        color:black;
+    }
+
+    .connect {
+        position: absolute;
+        top:710.4vh;
+        left:38vw;
+        width:25vw;
+        border: none;
+        border-top: 0.2vh solid black;
+        text-align: center;
+        font-size: 3.4vw;
+        font-family: "Norwester";
+        color:black;
+    }
+
+    .contacts {
+        position: absolute;
+        top:715.9vh;
+        left:29vw;
+    }
+    .contacts img {
+        width: 6vw;
+        margin: 0 1.8vw;
+        cursor: pointer;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .contacts img:hover {
+        width: 4vw;
+    }
+    
+}

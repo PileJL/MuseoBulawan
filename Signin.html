@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Museo Bulawan Official</title>
+	<link rel="icon" href="Images/Logo 1.png">
+    <link rel="stylesheet" type="text/css" href="Signin.css">
+	<style>
+		.error-message {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #ffdddd;
+			padding: 10px;
+            font-family: "century gothic";
+			border-radius: 5px;
+			font-weight: bold;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+		function displayErrorMessage() {
+			var errorContainer = document.createElement("div");
+			errorContainer.className = "error-message";
+			errorContainer.innerHTML = "Invalid email or password.";
+
+			document.body.appendChild(errorContainer);
+
+			setTimeout(function() {
+				errorContainer.style.display = "none";
+			}, 2000); // Hide the error message after 2 seconds (2000 milliseconds)
+		}
+
+		function validateForm() {
+			var email = document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+
+			if (email === "bulawanmuseo@gmail.com" && password === "bulawanadmin") {
+				return true;
+			} else {
+				displayErrorMessage();
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="section sigin_sec">
+		<a href="Index.html"><img src="Images/Logo 2.png" class="logo" alt="Museo Bulawan Logo"></a>
+        <img class="bulawan_logo" src="Images/Logo 1.png" alt="Museo Bulawan Logo">
+		<p class="bulawan_title"><b>MUSEO BULAWAN</b></p>
+		<p class="bulawan_tagline">"An Exponent of Cultural Development"</p>
+
+        <form class="signin" action="EditEvents.html" onsubmit="return validateForm()">
+            <label for="email"><b><i>Email</i></b></label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="password"><b><i>Password</i></b></label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <input id="login_btn" type="submit" value="Log in">
+        </form>
+    </div>
+</body>
+</html>

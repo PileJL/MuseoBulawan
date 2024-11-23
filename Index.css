@@ -1,0 +1,829 @@
+@font-face {
+    font-family: "Sukar Black";
+    src: url("Fonts/Sukar black.ttf");
+    }
+
+@font-face {
+    font-family: "Core Narae Pro";
+    src: url("Fonts/Core narae Pro.ttf");
+    }
+
+@font-face {
+    font-family: "Lumios Marker";
+    src: url("Fonts/Lumios Marker.otf");
+    }
+
+@font-face {
+    font-family: "Charm";
+    src: url("Fonts/Charm.ttf");
+    }
+
+@font-face {
+    font-family: "Intro Rust";
+    src: url("Fonts/Intro Rust.otf");
+    }
+
+@font-face {
+    font-family: "Norwester";
+    src: url("Fonts/Norwester.otf");
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    }
+
+.section {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+.logo {
+    position:absolute;
+    top: 3vh;
+    left: 2vw;
+    height: auto;
+    width:6vw;
+    }
+
+.nav1 {
+    position: absolute;
+    top: 6.5vh;
+    left: 8.5vw;
+    align-items: center;
+    }
+
+.nav1_btn {
+    font-family: "Sukar Black";
+    font-size: 1.5vw;
+    padding: 0em 2em;
+    color:white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
+    }
+
+.nav1_btn:hover {
+    font-size: 1.7vw;
+    border-radius: 5vw;
+    background-color: rgba(0, 0, 0, 0.1);
+    }
+
+.slideshow {
+    position: absolute;
+    top: 19.5vh;
+    left: 11.5vw;
+    height: 40vh; 
+    width: 31vw;
+}
+
+.slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+.text-container {
+    position: absolute; 
+    top:62vh;
+    left: 9.9vw; 
+    width: 34vw; 
+    border-radius: 0.5vw;
+    background-color: rgba(0, 0, 0, 0.1); 
+    }
+    
+.text {
+    font-family: "Core Narae Pro";
+    font-size: 1.05vw; 
+    color: white;
+    text-align: justify;
+    padding-left: 0.3em; 
+    padding-top: 0.3em;
+    padding-right: 0.3em;
+    padding-bottom: 0.4em;
+}
+
+.event_btn {
+    position: absolute;
+    top:84vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Sukar Black";
+    font-size: 1vw;
+    color: black;
+    border: none;
+    padding: 0.5em 2.5em;
+    cursor: pointer;
+    border-top-right-radius: 1.2vw;
+    border-bottom-right-radius: 1.2vw;
+    transition: font-size 0.3s ease-in-out;
+    background: linear-gradient(to left, #ccff99 2%, #ffd700 64%);
+}
+
+.event_btn:hover{
+    font-size: 1.2vw;
+}
+
+.nav2 {
+    position: absolute;
+    top: 95vh;
+    left: 50vw;
+    width: 62vw;
+    border-radius: 2.4vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(-50%);
+    padding: 0.5em 0em;
+    background-color: #ffd154;
+}
+
+.nav2_btn {
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: "Sukar Black";
+    color: black;
+    border: none;
+    padding: 0.2em 1em;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.nav2_btn:hover {
+    font-size: 2.2vw;
+    border-radius: 3vw;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.tagline {
+    position: absolute;
+    top: 7vh;
+    right: 8vw;
+    font-family: "Lumios Marker";
+    font-size: 2vw;
+    color:white;
+}
+
+.artifacts {
+    position: absolute;
+    top:18vh;
+    right: 6.4vw;
+    width: 28vw;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+.image-container {
+    position: relative;
+  }
+  
+.image-container .title {
+    position: absolute;
+    top:56.5vh;
+    right: 8.6vw;
+    width:23.5vw;
+    font-size: 2.5vw;
+    font-weight: bold;
+    font-family: "Charm";
+    text-align: center;
+    color:white;
+  }
+
+
+.image-container .date {
+    position: absolute;
+    top:64vh;
+    right:8.6vw;
+    width:23.5vw;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: "Century Gothic";
+    color:white;
+    }
+  
+.image-container .description {
+    position: absolute;
+    top:70vh;
+    right:4.5vw;
+    width:32vw;
+    text-align: justify;
+    font-size: 0.8vw;
+    font-family: "Century Gothic";
+    color:white;
+  }
+  
+.image-container .button {
+    position: absolute;
+    top:87vh;
+    right:5vw;
+    width:9vw;
+    padding: 0.3em;
+    border: 0.12vw solid white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    border-radius: 1vw;
+    font-family: "Century Gothic";
+    font-size: 0.8vw;
+    transition: font-size 0.3s ease-in-out;
+    background-color: transparent;
+  }
+
+  .image-container .button:hover {
+    font-size: 1vw;
+}
+  
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.bantayog_sec {
+    background-image: url('Backgrounds/BantayogBG.png');
+    }
+
+.bantayog_title {
+    position: absolute;
+    top: 110vh;
+    left: 35vw;
+    text-shadow: 0.1vw 0.1vw 0.1vw #00000070;
+    line-height: 8vh;
+    color:black;
+    font-family: "Lumios Marker";
+    text-align: center;
+    font-size: 3.2vw;
+}
+
+.first_bantayog_pic {
+    position: absolute;
+    top: 133vh;
+    left: 39.5vw;
+    height: auto;
+    width: 20vw;
+    animation: float 3s ease-in-out infinite;
+}
+
+.first_bantayog1 {
+    position: absolute;
+    top: 126vh;
+    left: 9.5vw;
+    height: 38vh; 
+    width: 21.5vw;
+}
+
+.bantayog_txt {
+    position: absolute;
+    top:165vh;
+    left:7.4vw;
+    width:26vw;
+    font-size: 0.8vw;
+    font-family: "Century Gothic";
+    text-align: justify;
+    color:white;
+  }
+
+.see_more_btn {
+    position: absolute;
+    top:183vh;
+    left:23.6vw;
+    width:9vw;
+    padding: 0.3em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 0.12vw solid white;
+    color: white;
+    border-radius: 1vw;
+    font-family: "Century Gothic";
+    font-size: 0.8vw;
+    transition: font-size 0.3s ease-in-out;
+    background-color: transparent;
+  }
+
+
+.first_bantayog2 {
+    position: absolute;
+    top: 126vh;
+    right: 13.3vw;
+    height: 38vh; 
+    width: 14.5vw;
+}
+
+.bantayog_txt2 {
+    position: absolute;
+    top:165vh;
+    right:7.4vw;
+    width:26vw;
+    text-align: justify;
+    font-size: 0.8vw;
+    font-family: "Century Gothic";
+    color:white;
+  }
+
+.see_more_btn2 {
+    position: absolute;
+    top:183vh;
+    right:7.4vw;
+    width:9vw;
+    padding: 0.3em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 0.12vw solid white;
+    color: white;
+    border-radius: 1vw;
+    font-family: "Century Gothic";
+    font-size: 0.8vw;
+    transition: font-size 0.3s ease-in-out;
+    background-color: transparent;
+  }
+
+.see_more_btn:hover, .see_more_btn2:hover {
+font-size: 1vw;
+}
+    
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_sec {
+    height: 60vh;
+    background-image: url('Backgrounds/FooterBG.png');
+    }
+
+.bulawan_logo {
+    position: absolute;
+    top: 205vh;
+    left: 47vw;
+    height: auto; 
+    width: 6.5vw;
+}
+
+.bulawan_title {
+    position: absolute;
+    top:213vh;
+    left:32vw;
+    width:37vw;
+    text-align: center;
+    font-size: 3.8vw;
+    font-family: "Intro Rust";
+    color:black;
+  }
+
+.bulawan_tagline {
+    position: absolute;
+    font-size: 2.7vw;
+    top:223vh;
+    width:37vw;
+    left:32vw;
+    font-family: "Lumios Marker";
+    text-align: center;
+    color:black;
+  }
+
+.connect {
+    position: absolute;
+    top:234.5vh;
+    left:40vw;
+    width:20vw;
+    border: none;
+    border-top: 0.8vh solid black;
+    text-align: center;
+    font-size: 2.4vw;
+    font-family: "Norwester";
+    color:black;
+  }
+
+.contacts {
+    position: absolute;
+    top:248vh;
+    left:38.7vw;
+}
+.contacts img {
+    width: 3.6vw;
+    margin: 0 1vw;
+    cursor: pointer;
+    transition: width 0.3s ease-in-out;
+}
+
+.contacts img:hover {
+    width: 4vw;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 391px) {
+    .logo {
+        position:absolute;
+        top: 3vh;
+        left: 5vw;
+        height: auto;
+        width:15vw;
+        }
+
+    .nav1 {
+        position: absolute;
+        top:5.4vh;
+        left: 21vw;
+        align-items: center;
+        }
+    
+    .nav1_btn {
+        font-family: "Sukar Black";
+        font-size: 3.5vw;
+        padding: 0em 1em;
+        color:white;
+        cursor: pointer;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out;
+        }
+    
+    .nav1_btn:hover {
+        font-size: 3.7vw;
+        border-radius: 5vw;
+        background-color: rgba(0, 0, 0, 0.1);
+        }
+  
+    .slideshow {
+        position: absolute;
+        top: 13vh;
+        left: 11.5vw;
+        height: 25vh; 
+        width: 77vw;
+    }
+
+    .slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .slideshow img.active {
+        opacity: 1;
+    }
+
+    .text-container {
+        position: absolute; 
+        top:39vh;
+        left: 11vw; 
+        width: 78vw; 
+        border-radius: 0.5vw;
+        background-color: rgba(0, 0, 0, 0.1); 
+        }
+        
+    .text {
+        font-family: "Core Narae Pro";
+        font-size: 2.4vw; 
+        color: white;
+        text-align: justify;
+        padding-left: 0.3em; 
+        padding-top: 0.3em;
+        padding-right: 0.3em;
+        padding-bottom: 0.4em;
+    }
+
+    .event_btn {
+        position: absolute;
+        top:49vh;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-family: "Sukar Black";
+        font-size: 2.8vw;
+        color: black;
+        border: none;
+        padding: 0.5em 2.5em;
+        cursor: pointer;
+        border-top-right-radius: 1.2vw;
+        border-bottom-right-radius: 1.2vw;
+        transition: font-size 0.3s ease-in-out;
+        background: linear-gradient(to left, #ccff99 2%, #ffd700 64%);
+    }
+
+    .event_btn:hover{
+        font-size: 3vw;
+    }
+
+    .nav2 {
+        position: absolute;
+        top: 98vh;
+        left: 50vw;
+        width: 90vw;
+        border-radius: 2.4vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateX(-50%);
+        padding: 0.5em 0em;
+        background-color: #ffd154;
+    }
+
+    .nav2_btn {
+        font-size: 3.8vw;
+        font-weight: bold;
+        font-family: "Sukar Black";
+        color: black;
+        border: none;
+        padding: 0.2em 1em;
+        cursor: pointer;
+        transition: font-size 0.3s ease-in-out;
+        background-color: transparent;
+    }
+
+    .nav2_btn:hover {
+        font-size: 4vw;
+        border-radius: 3vw;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+
+    .tagline {
+        position: absolute;
+        top: 55vh;
+        right: 22vw;
+        font-family: "Lumios Marker";
+        font-size: 4.5vw;
+        color:white;
+    }
+
+    .artifacts {
+        position: absolute;
+        top:60.5vh;
+        right: 20vw;
+        width: 60vw;
+        height: auto;
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    .image-container {
+        position: relative;
+    }
+    
+    .image-container .title {
+        position: absolute;
+        top:80vh;
+        right: 38vw;
+        width:23.5vw;
+        font-size: 4vw;
+        font-weight: bold;
+        font-family: "Charm";
+        text-align: center;
+        color:white;
+    }
+
+
+    .image-container .date {
+        position: absolute;
+        top:82.8vh;
+        right:38vw;
+        width:23.5vw;
+        text-align: center;
+        font-size: 2.8vw;
+        font-weight: bold;
+        font-family: "Century Gothic";
+        color:white;
+        }
+    
+    .image-container .description {
+        position: absolute;
+        top:85vh;
+        right:11vw;
+        width:78vw;
+        text-align: justify;
+        font-size: 2.3vw;
+        font-family: "Century Gothic";
+        color:white;
+    }
+    
+    .image-container .button {
+        position: absolute;
+        top:70vh;
+        right:7vw;
+        width:16vw;
+        padding: 0.3em;
+        border: 0.12vw solid white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        color: white;
+        border-radius: 1vw;
+        font-family: "Century Gothic";
+        font-size: 1.8vw;
+        transition: font-size 0.3s ease-in-out;
+        background-color: transparent;
+    }
+
+    .image-container .button:hover {
+        font-size: 2vw;
+    }
+    
+    @keyframes float {
+        0% {
+        transform: translateY(0);
+        }
+        50% {
+        transform: translateY(-20px);
+        }
+        100% {
+        transform: translateY(0);
+        }
+    }
+
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .bantayog_sec {
+        background-image: url('Mobile/BantayogBG.png');
+        }
+
+    .bantayog_title {
+        position: absolute;
+        top: 107vh;
+        left: 18vw;
+        text-shadow: 0.1vw 0.1vw 0.1vw #00000070;
+        line-height: 3vh;
+        color:white;
+        font-family: "Lumios Marker";
+        text-align: center;
+        font-size: 6.2vw;
+    }
+
+    .first_bantayog_pic {
+        position: absolute;
+        top: 117vh;
+        left: 30vw;
+        height: auto;
+        width: 42vw;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .first_bantayog1 {
+        position: absolute;
+        top: 151vh;
+        left: 7.8vw;
+        height: 23vh; 
+        width: 38vw;
+    }
+
+    .bantayog_txt {
+        position: absolute;
+        top:154vh;
+        left:49vw;
+        width:44vw;
+        font-size: 2.2vw;
+        font-family: "Century Gothic";
+        text-align: justify;
+        color:black;
+    }
+
+    .see_more_btn {
+        position: absolute;
+        top:169vh;
+        left:49vw;
+        width:18vw;
+        padding: 0.3em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border: 0.12vw solid black;
+        color: black;
+        border-radius: 1vw;
+        font-family: "Century Gothic";
+        font-size: 2.2vw;
+        transition: font-size 0.3s ease-in-out;
+        background-color: transparent;
+    }
+
+    .first_bantayog2 {
+        position: absolute;
+        top: 175.5vh;
+        left: 7.8vw;
+        height: 23vh; 
+        width: 38vw;
+    }
+
+    .bantayog_txt2 {
+        position: absolute;
+        top:180vh;
+        left:49vw;
+        width:44vw;
+        font-size: 2.2vw;
+        font-family: "Century Gothic";
+        text-align: justify;
+        color:black;
+    }
+
+    .see_more_btn2 {
+        position: absolute;
+        top:192vh;
+        left:49vw;
+        width:18vw;
+        padding: 0.3em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border: 0.12vw solid black;
+        color: black;
+        border-radius: 1vw;
+        font-family: "Century Gothic";
+        font-size: 2.2vw;
+        transition: font-size 0.3s ease-in-out;
+        background-color: transparent;
+    }
+
+    .see_more_btn:hover, .see_more_btn2:hover {
+    font-size: 2.4vw;
+    }
+        
+    /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .footer_sec {
+        height: 20vh;
+        background-image: url('Mobile/FooterBG.png');
+        }
+
+    .bulawan_logo {
+        position: absolute;
+        top: 201.4vh;
+        left: 46vw;
+        height: auto; 
+        width: 10vw;
+    }
+
+    .bulawan_title {
+        position: absolute;
+        top:204.4vh;
+        left:30vw;
+        width:42vw;
+        text-align: center;
+        font-size: 4.5vw;
+        font-family: "Intro Rust";
+        color:black;
+    }
+
+    .bulawan_tagline {
+        position: absolute;
+        font-size: 3.7vw;
+        top:206.9vh;
+        width:48vw;
+        left:27vw;
+        font-family: "Lumios Marker";
+        text-align: center;
+        color:black;
+    }
+
+    .connect {
+        position: absolute;
+        top:210.4vh;
+        left:38vw;
+        width:25vw;
+        border: none;
+        border-top: 0.2vh solid black;
+        text-align: center;
+        font-size: 3.4vw;
+        font-family: "Norwester";
+        color:black;
+    }
+
+    .contacts {
+        position: absolute;
+        top:215.9vh;
+        left:29vw;
+    }
+    .contacts img {
+        width: 6vw;
+        margin: 0 1.8vw;
+        cursor: pointer;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .contacts img:hover {
+        width: 4vw;
+    }
+}

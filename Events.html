@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Museo Bulawan Official</title>
+    <link rel="icon" href="Images/Logo 1.png">
+    <link rel="stylesheet" type="text/css" href="Events.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("Backgrounds/AllBG.png");
+        }
+    
+        .event_section {
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 0.1em;
+            display: flex;
+            flex-direction: row; 
+            flex-wrap: wrap; 
+        }
+    
+        .event_iframe {
+            border: none;
+            overflow: hidden;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            position: relative;
+            flex: 1;
+            width: 99vw;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .event_iframe.left-align {
+            justify-content: flex-start;
+            }
+
+    
+        #eventContainer {
+            display: none;
+            margin-top: 0;
+        }
+    
+        @media only screen and (max-width: 391px) {
+            .event_section {
+                padding: 1em;
+            }
+
+            .event_iframe {
+                width: 96vw;
+                margin-left: auto;
+                margin-right: auto;
+                flex-direction: column;
+                align-items: center; 
+            }
+        }
+
+
+    </style>
+   
+    <script>
+        window.addEventListener('resize', function () {
+            if (window.innerWidth <= 391 && !window.isMobileView) {
+                window.isMobileView = true;
+                location.reload();
+            } else if (window.innerWidth > 389 && window.isMobileView) {
+                window.isMobileView = false;
+                location.reload();
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <div class="section latest_sec">
+        <a href="Index.html"><img src="Images/Logo 2.png" class="logo" alt="Museo Bulawan Logo"></a>
+
+        <div class="nav1">
+            <a class="nav1_btn" href="About.html">About Us</a>
+            <a class="nav1_btn" href="Events.html" style="color:#FFD700">Events</a>
+            <a class="nav1_btn" href="Services.html">Services</a>
+        </div>
+
+        <p class="latest_title"><b>LATEST<br>EVENTS</b></p>
+        <p id="month-year"></p>
+    </div>
+
+    <div id="divisionContainer" class="event_iframe">
+        <!-- The division for iframes will be displayed here -->
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDpfb3ZVikVV4KOucKM44ynFkdLd-P9r5Y",
+            authDomain: "museobulawan-29287.firebaseapp.com",
+            databaseURL: "https://museobulawan-29287-default-rtdb.firebaseio.com",
+            projectId: "museobulawan-29287",
+            storageBucket: "museobulawan-29287.appspot.com",
+            messagingSenderId: "654469372747",
+            appId: "1:654469372747:web:2a4c173cce1fcd1d9626ce",
+            measurementId: "G-1WR6DKMNH2"
+        };
+        const app = firebase.initializeApp(firebaseConfig); // initialize firebase
+        var add_event_databaseRef = firebase.database().ref('Events'); // database ref for events
+        var iframeLinks = []; // Array to store iframe links
+
+        function displayEvents() {
+            var divisionContainer = document.getElementById("divisionContainer");
+            divisionContainer.innerHTML = "";
+
+            var maxIframesPerDiv = 3;
+            var currentDiv = null;
+
+            for (var i = 0; i < iframeLinks.length; i++) {
+                if (i % maxIframesPerDiv === 0) {
+                currentDiv = document.createElement("div");
+                currentDiv.className = "event_iframe";
+                divisionContainer.appendChild(currentDiv);
+                }
+
+                var postUrl = extractPostUrlFromIframeLink(iframeLinks[i]);
+
+                var embeddedPostDiv = document.createElement("div");
+                embeddedPostDiv.className = "fb-post";
+                embeddedPostDiv.setAttribute("data-href", postUrl);
+                embeddedPostDiv.setAttribute("data-width", "500");
+
+                currentDiv.appendChild(embeddedPostDiv);
+            }
+
+            // Add class to the newly added iframe
+            var allIframes = divisionContainer.querySelectorAll(".event_iframe");
+            var newIframeIndex = allIframes.length - 1;
+            var newIframe = allIframes[newIframeIndex];
+            newIframe.classList.add("left-align");
+
+            reloadFacebookSDK();
+            }
+
+
+        function extractPostUrlFromIframeLink(link) {
+            var urlParams = new URLSearchParams(link.split("?")[1]);
+            var postUrl = decodeURIComponent(urlParams.get("href"));
+            return postUrl;
+        }
+
+        function reloadFacebookSDK() {
+            if (window.FB) {
+                window.FB.XFBML.parse();
+            } else {
+                (function(d, s, id) {
+                    var js,
+                        fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0";
+                    fjs.parentNode.insertBefore(js, fjs);
+                })(document, "script", "facebook-jssdk");
+            }
+        }
+
+        function showEventContainer() {
+            var divisionContainer = document.getElementById("divisionContainer");
+            divisionContainer.style.display = "block";
+        }
+
+        function initialize() {
+            var date = new Date();
+            var month = date.toLocaleString("default", { month: "long" });
+            var year = date.getFullYear();
+            var monthYear = month + " " + year;
+            document.getElementById("month-year").innerHTML = monthYear;
+
+            add_event_databaseRef.on("child_added", function(snapshot) {
+                var eventData = snapshot.val();
+                iframeLinks.unshift(eventData.link);
+                displayEvents();
+                showEventContainer();
+            });
+
+            add_event_databaseRef.on("child_removed", function(snapshot) {
+                var eventData = snapshot.val();
+                var index = iframeLinks.indexOf(eventData.link);
+                if (index !== -1) {
+                    iframeLinks.splice(index, 1);
+                    displayEvents();
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            initialize();
+        });
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js"></script>
+
+    <script src="Index.js"></script>
+</body>
+</html>
